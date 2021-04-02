@@ -53,7 +53,16 @@ require_once '../model/InvoicesManager.php';
 <div class="data companies">
     <h3>Companies</h3>
     <div>
-        <p class='alignement'>Maison du sex et du plaisir</p>
+        <p class='alignement'>
+        <?php 
+                $invoices = new InvoicesManager();
+                $resultsAll = $invoices->getAllUsers();
+                foreach ($resultsAll as $key => $companie) {
+                    //var_dump($product['productCode']);
+                    echo $companie['name_companies']. '</br>'.'</br>';
+                }
+            ?>
+        </p>
     </div>
 </div>
 <div class="data type">
