@@ -25,12 +25,63 @@ require_once '../model/HomeManager.php';
         </header>
 
         <main>
-            <h1>Welcome to COGIP !</h1>
+            <div class="container allPage">
+                <h1>Welcome to COGIP !</h1>
 
+                <p>Bonjour !</p> <!--Display the user's name -->
+
+
+                <!-- === Display the last five invoices === -->
+                <div class="container invoice_display">
+                    <h4>Last Invoice :</h4>
+
+                    <?php
+                        $invoice = new HomeManager();
+                        $resultInvoice = $invoice->getFiveInvoices();
+
+                        foreach($resultInvoice as $key => $resultInvoice) {
+                            echo $resultInvoice["number_of_invoices"] . "</br>";
+                        }
+                    ?>
+
+                </div>
+
+
+                <!-- === Display the last five invoices === -->
+                <div class="container Clients_display">
+                    <h4>Last Clients :</h4>
+
+                    <?php
+                        $client = new HomeManager();
+                        $resultClient = $client->getFiveClients();
+
+                        foreach($resultClient as $key => $resultClient) {
+                            echo $resultClient["first_name"] . '</br>';
+                        }
+                    ?>
+
+                </div>
+
+
+                <!-- === Display the last five invoices === -->
+                <div class="container Companies_display">
+                    <h4>Last Companies :</h4>
+
+                    <?php
+                        $companie = new HomeManager();
+                        $resultCompanie = $companie->getFiveCompanies();
+
+                        foreach($resultCompanie as $key => $resultCompanie) {
+                            echo $resultCompanie["name_companies"] . "</br>";
+                        }
+                    ?>
+
+                </div>
+            </div>
         </main>
 
         <footer>
-        
+
         </footer>
 
     </body>
