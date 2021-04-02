@@ -1,18 +1,11 @@
 <?php
     require_once './model/Manager.php';
     require_once './model/User.php';
+    require_once './model/ClientsManager.php';
+    require_once './model/CompaniesManager.php';
+    require_once './model/InvoicesManager.php';
     
     
-    try {
-        
-        $results = $db->prepare("SELECT first_name FROM clients");
-        $results->execute();
-    } catch(Exception $e) {
-        echo $e->getMessage();
-        exit;
-    } 
-    $customerNumber = $results->fetchAll(PDO::FETCH_ASSOC);
-   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,11 +17,14 @@
     </head>
 
     <body>
-        <?php
-             foreach ($customerNumber as $key => $customer) {
-                //var_dump($product['productCode']);
-                echo '<li>'. $customer['first_name'].'</li>';
-            }
+
+    <h1> test</h1>
+        <?php 
+
+        $object = new ClientsManager;
+        echo $object->getAllUsers();
+    
         ?>
+
     </body>
 </html>
