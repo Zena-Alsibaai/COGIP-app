@@ -8,7 +8,7 @@ $Companies = new CompaniesManager;
 $resultsAll = $Companies->getAllCompanies();
 
 
-foreach($resultsAll as $each => $resultsAll );
+
              
 ?>
 
@@ -26,22 +26,26 @@ foreach($resultsAll as $each => $resultsAll );
     
     <div class="container">
         <H1 class="text-center my-5">Coucou famille Bot</H1>
-        <div class="row align-items-center text-center ">
-            <div class="col">
-                <h4 class="my-2">Name :</h4>
-                <?= $resultsAll['name_companies'] ?>
-            </div>
-            <div class="col">
-                <h4  class="my-2">TVA :</h4>
-                <a href="#" ><?= $resultsAll['vat_number'] ?></a>
+
+        <?php foreach ($resultsAll as $each => $resultsAll ): ?>
+            <div class="row align-items-center text-center ">
+                <div class="col">
+                    <h5 class="my-4">Name :</h5>
+                    <?php echo $resultsAll['name_companies'] ?>
+                </div>
+                <div class="col">
+                    <h5  class="my-4">TVA :</h5>
+                    <a href="#" ><?php echo $resultsAll['vat_number'] ?></a>
         
-            </div>
-            <div class="col">
-                <h4  class="my-2">Country :</h4>
-                <?= $resultsAll['country'] ?>
-            </div>
+                </div>
+                <div class="col">
+                    <h5  class="my-4">Country :</h5>
+                    <?php echo $resultsAll['country'] ?>
+                </div>
    
-        </div>
+            </div>
+        <?php endforeach; ?>
+     
 
     </div>
     </main>
