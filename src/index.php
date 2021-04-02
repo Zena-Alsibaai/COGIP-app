@@ -1,4 +1,14 @@
+<?php
 
+    require_once '../model/Manager.php';
+    require_once '../model/CompagniesManager.php';
+    require_once '../model/ClientsManager.php';
+    require_once '../model/InvoicesManager.php';
+    require_once '../model/User.php';
+
+    echo "coucou";
+ 
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,6 +20,14 @@
 
     <body>
  
+
+    <h1> test</h1>
+        <?php 
+
+        $object = new ClientsManager;
+        echo $object->getAllUsers();
+    
+        ?>
 
     </body>
 </html>
