@@ -8,7 +8,7 @@ class HomeManager extends Manager {
 
     public function getFiveClients() {
         $statment = $this->connectDB()->query(
-            "SELECT first_name 
+            "SELECT * 
             FROM clients ");
         
         // traitement de données récoltée dans la requete.
@@ -18,7 +18,7 @@ class HomeManager extends Manager {
 
     public function getFiveInvoices() {
         $statment = $this->connectDB()->query(
-            "SELECT number_of_invoices 
+            "SELECT *
             FROM invoices ");
         
         // traitement de données récoltée dans la requete.
@@ -28,7 +28,7 @@ class HomeManager extends Manager {
 
     public function getFiveCompanies() {
         $statment = $this->connectDB()->query(
-            "SELECT name_companies 
+            "SELECT * 
             FROM companies ");
         
         // traitement de données récoltée dans la requete.

@@ -4,6 +4,15 @@ declare(strict_types=1);
 
 require_once '../model/HomeManager.php';
 
+$invoice = new HomeManager();
+$resultInvoice = $invoice->getFiveInvoices();
+
+$client = new HomeManager();
+$resultClient = $client->getFiveClients();
+
+$companie = new HomeManager();
+$resultCompanie = $companie->getFiveCompanies();
+
 ?>
 
 <!DOCTYPE html>
@@ -35,48 +44,100 @@ require_once '../model/HomeManager.php';
                 <div class="container invoice_display">
                     <h4>Last Invoice :</h4>
 
-                    <?php
-                        $invoice = new HomeManager();
-                        $resultInvoice = $invoice->getFiveInvoices();
-
-                        foreach($resultInvoice as $key => $resultInvoice) {
-                            echo $resultInvoice["number_of_invoices"] . "</br>";
-                        }
-                    ?>
-
+                    <table>
+                        <tr>
+                        <th><h5>Number Of Invoices</h5></th>
+                        <th> | </th>
+                        <th><h5>Date Of Invoices</h5></th>
+                        <th> | </th>
+                        <th><h5>ID Of Clients</h5></th>
+                        <th> | </th>
+                        <th><h5>ID Of Companies</h5></th>
+                        </tr>
+                        <?php
+                            foreach($resultInvoice as $key => $resultInvoice) {
+                                echo '<tr>' .
+                                    '<td>' . $resultInvoice["number_of_invoices"] . '</td>' .
+                                    '<td> | </td>' .
+                                    '<td>' . $resultInvoice["date"] . '</td>' .
+                                    '<td> | </td>' .
+                                    '<td>' . $resultInvoice["id_clients"] . '</td>' .
+                                    '<td> | </td>' .
+                                    '<td>' . $resultInvoice["id_companies"] . '</td>' .
+                                '</tr>';
+                            }
+                        ?>
+                    </table>
                 </div>
 
+                </br>
 
                 <!-- === Display the last five invoices === -->
                 <div class="container Clients_display">
                     <h4>Last Clients :</h4>
 
-                    <?php
-                        $client = new HomeManager();
-                        $resultClient = $client->getFiveClients();
-
-                        foreach($resultClient as $key => $resultClient) {
-                            echo $resultClient["first_name"] . '</br>';
-                        }
-                    ?>
+                    <table>
+                        <tr>
+                            <th><h5>First Name</h5></th>
+                            <th> | </th>
+                            <th><h5>Last Name</h5></th>
+                            <th> | </th>
+                            <th><h5>Email</h5></th>
+                            <th> | </th>
+                            <th><h5>ID Of Companies</h5></th>
+                        </tr>
+                        <?php
+                            foreach($resultClient as $key => $resultClient) {
+                                echo '<tr>' .
+                                    '<td>' . $resultClient["first_name"] . '</td>' .
+                                    '<td> | </td>' .
+                                    '<td>' . $resultClient["last_name"] . '</td>' .
+                                    '<td> | </td>' .
+                                    '<td>' . $resultClient["email"] . '</td>' .
+                                    '<td> | </td>' .
+                                    '<td>' . $resultClient["id_companies"] . '</td>' .
+                                '</tr>';
+                            }
+                        ?>
+                    </table>
 
                 </div>
-
+                
+                </br>
 
                 <!-- === Display the last five invoices === -->
                 <div class="container Companies_display">
                     <h4>Last Companies :</h4>
 
-                    <?php
-                        $companie = new HomeManager();
-                        $resultCompanie = $companie->getFiveCompanies();
-
-                        foreach($resultCompanie as $key => $resultCompanie) {
-                            echo $resultCompanie["name_companies"] . "</br>";
-                        }
-                    ?>
+                    <table>
+                        <tr>
+                            <th><h5>Name Of Companies</h5></th>
+                            <th> | </th>
+                            <th><h5>Country</h5></th>
+                            <th> | </th>
+                            <th><h5>TVA Numer</h5></th>
+                            <th> | </th>
+                            <th><h5>Types</h5></th>
+                        </tr>
+                        <?php
+                            foreach($resultCompanie as $key => $resultCompanie) {
+                                echo '<tr>' .
+                                    '<td>' . $resultCompanie["name_companies"] . '</td>' .
+                                    '<td> | </td>' .
+                                    '<td>' . $resultCompanie["country"] . '</td>' .
+                                    '<td> | </td>' .
+                                    '<td>' . $resultCompanie["vat_number"] . '</td>' .
+                                    '<td> | </td>' .
+                                    '<td>' . $resultCompanie["id_types"] . '</td>' .
+                                '</tr>';
+                            }
+                        ?>
+                    </table>
 
                 </div>
+
+                </br>
+                
             </div>
         </main>
 
