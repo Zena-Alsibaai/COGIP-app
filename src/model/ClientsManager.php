@@ -17,6 +17,7 @@ class ClientsManager extends Manager{
         // traitement de données récoltée dans la requete.
         $resultsAll = $statment->fetchAll(PDO::FETCH_ASSOC);
         return $resultsAll;
+        
 
     }
 }
