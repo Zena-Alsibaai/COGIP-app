@@ -1,5 +1,20 @@
 <?php
-    echo "coucou";
+    try {
+        $db = new PDO("mysql:host=remotemysql.com;dbname=yrsoxbGqbm;port=3306", "yrsoxbGqbm", "gjTYFKCudH");
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        //return $db;
+    } catch(Exception $e) {
+        die("Error : ".$e->getMessage());
+    }
+
+    try {
+        $results = $db->prepare("SELECT first_name FROM clients");
+        $results->execute();
+    }catch(Exception $e) {
+        die('Erreur: '.$e->getMessage());
+    }
+
+    $display = $results->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +26,13 @@
     </head>
 
     <body>
-
+        <h1>Welcome to the COGIP!</h1>
+        <ol>
+        <?php
+            foreach($display as $key => $display) {
+                echo "<li>" .$display['first_name']. "</li>";
+            }
+        ?>
+    </ol>
     </body>
 </html>
