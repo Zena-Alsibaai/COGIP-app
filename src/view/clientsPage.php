@@ -7,12 +7,7 @@ require '../model/ClientsManager.php';
 $Clients = new ClientsManager;
 $resultsAll = $Clients->getAllUsers();
 
-// foreach($resultsAll as $each => $resultsAll ){
-    
-//     $firstname = $resultsAll['first_name'] . ' ' . '<br> ';
-//     echo $firstname;
-    
-// }
+
 
 ?>
 <!DOCTYPE html>
@@ -53,82 +48,56 @@ $resultsAll = $Clients->getAllUsers();
       </div>
     </div>
 </nav> -->
+    <header class="py-5 bg-dark">
+        <div class="container">
+          <p class="m-0 text-center text-white"><h1 class="m-4 p-5 border border-5 border-info rounded-pill text-center text-uppercase fw-bold bg-white display-1">Client Page</h1></p>
+        </div>
+
+  <!-- /.container -->
+    </header>
 
    <!-- Page Content -->
    <div class="container">
 
-<div class="row">
+    <div class="row">
 
-  <div class="col-lg-3">
-    <h1 class="my-4">Client Page</h1>
+    <div class="c">
+    
     <div class="list-group text-center">
 
-    <h3> Projet de la famille BOT </h3>
+    <h3 class="my-5"> Projet de la famille BOT </h3>
 
-    <table style="width:100%">
-        <tr>
-          <th>Firstname</th>
-          <th>Lastname</th>
-          <th>Email</th>
-        </tr>
-
-        <tr>
-            <?php 
-                echo "Coucou famille Bot". '<br>';
-                foreach($resultsAll as $each => $resultsAll ){
-                    echo '<tr> <td> ' . $resultsAll['first_name'] . ' ' . ' </td></tr>';
-                }
-                
-             ?>
-        </tr>
-
-        <tr>
-            <?php 
-                echo "Coucou famille Bot". '<br>';
-                foreach($resultsAll as $each => $resultsAll ){
-                    echo '<tr> <td> ' . $resultsAll['last_name'] . ' ' . ' </td></tr>';
-                }
-                
-             ?>
-        </tr>
-            
-            
-        
+    <table style="width:100%" class="table table-striped table-hover">
+        <tr class="text-info bg-dark">
+          <th class="shadow p-3 ">Firstname</th>
+          <th class="shadow p-3 ">Lastname</th>
+          <th class="shadow p-3 ">Email</th>
+          <th class="shadow p-3 "></th>
           
+        </tr>
+
+        <tr class="table shadow rounded  m-5 p-4 bg-danger" >
         
+            <?php 
+                //echo "Coucou famille Bot". '<br>';
+                foreach($resultsAll as $each => $resultsAll ){
+                    echo '<tr >'
+                    .'<td class="m-5 p-4 " > ' . $resultsAll['first_name'] . ' ' . ' </td>'
+                    .'<td class="m-5 p-4 " > ' . $resultsAll['last_name'] . ' ' . ' </td>'
+                    .'<td class="m-5 p-4 " >' .$resultsAll['email'] 
+                    .'<td class="m-5 p-4 text-info bg-dark" ><button type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
+                }
+                
+             ?>
+        </tr>
+
     </table>
 
-    <ul>
-   
-    </ul>
-
-       
-
     </div>
-  </div>
+    </div>
   <!-- /.col-lg-3 -->
 
-  <div class="col-lg-9">
-
-
-    <div class="card card-outline-secondary my-4">
-      <div class="card-header " id="indivInvoice">
-        Product Reviews
-      </div>
-      <div class="card-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-        <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-        <hr>
-        
-        <a href="#" class="btn btn-success">Details</a>
-      </div>
     </div>
-    <!-- /.card -->
-
-  </div>
-  <!-- /.col-lg-9 -->
-
-</div>
 
 </div>
 <!-- /.container -->
