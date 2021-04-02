@@ -25,7 +25,7 @@ require_once '../model/InvoicesManager.php';
 <div class="data invoiceNumber">
     <h3>Invoice number</h3>
     <div>
-        <p><a  href="#">
+        <p class='alignement'><a  href="#">
             <?php 
                 $invoices = new InvoicesManager();
                 $resultsAll = $invoices->getAllUsers();
@@ -40,7 +40,7 @@ require_once '../model/InvoicesManager.php';
 <div class="data dates">
     <h3>Dates</h3>
     <div>
-        <p>
+        <p class='alignement'>
         <?php 
                 foreach ($resultsAll as $key => $date) {
                     //var_dump($product['productCode']);
@@ -53,13 +53,13 @@ require_once '../model/InvoicesManager.php';
 <div class="data companies">
     <h3>Companies</h3>
     <div>
-        <p>Maison du sex et du plaisir</p>
+        <p class='alignement'>Maison du sex et du plaisir</p>
     </div>
 </div>
 <div class="data type">
     <h3>Type</h3>
     <div>
-        <p>fournisseur</p>
+        <p class='alignement'>fournisseur</p>
     </div>
 </div>
 
