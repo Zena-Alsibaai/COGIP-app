@@ -50,8 +50,6 @@ $resultCompanie = $companie->getFiveCompanies();
                         <th> | </th>
                         <th><h5>Date Of Invoices</h5></th>
                         <th> | </th>
-                        <th><h5>ID Of Clients</h5></th>
-                        <th> | </th>
                         <th><h5>ID Of Companies</h5></th>
                         </tr>
                         <?php
@@ -61,9 +59,7 @@ $resultCompanie = $companie->getFiveCompanies();
                                     '<td> | </td>' .
                                     '<td>' . $resultInvoice["date"] . '</td>' .
                                     '<td> | </td>' .
-                                    '<td>' . $resultInvoice["id_clients"] . '</td>' .
-                                    '<td> | </td>' .
-                                    '<td>' . $resultInvoice["id_companies"] . '</td>' .
+                                    '<td>' . $resultInvoice["name_companies"] . '</td>' .
                                 '</tr>';
                             }
                         ?>
@@ -72,7 +68,7 @@ $resultCompanie = $companie->getFiveCompanies();
 
                 </br>
 
-                <!-- === Display the last five invoices === -->
+                <!-- === Display the last five clients === -->
                 <div class="container Clients_display">
                     <h4>Last Clients :</h4>
 
@@ -95,7 +91,7 @@ $resultCompanie = $companie->getFiveCompanies();
                                     '<td> | </td>' .
                                     '<td>' . $resultClient["email"] . '</td>' .
                                     '<td> | </td>' .
-                                    '<td>' . $resultClient["id_companies"] . '</td>' .
+                                    '<td>' . $resultClient["name_companies"] . '</td>' .
                                 '</tr>';
                             }
                         ?>
@@ -105,7 +101,7 @@ $resultCompanie = $companie->getFiveCompanies();
                 
                 </br>
 
-                <!-- === Display the last five invoices === -->
+                <!-- === Display the last five companies === -->
                 <div class="container Companies_display">
                     <h4>Last Companies :</h4>
 
@@ -128,7 +124,7 @@ $resultCompanie = $companie->getFiveCompanies();
                                     '<td> | </td>' .
                                     '<td>' . $resultCompanie["vat_number"] . '</td>' .
                                     '<td> | </td>' .
-                                    '<td>' . $resultCompanie["id_types"] . '</td>' .
+                                    '<td>' . $resultCompanie["types_of"] . '</td>' .
                                 '</tr>';
                             }
                         ?>
