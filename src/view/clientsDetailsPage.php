@@ -1,7 +1,10 @@
 <?php
-//echo " Client Details Page";
+declare(strict_types=1);
 
+require '../model/ClientsManager.php';
 
+$Clients = new ClientsManager;
+$resultsAll = $Clients->getAllUsers();
 
 ?>
 
@@ -29,43 +32,9 @@
             <div class="row list-group text-center">
     
                 <h3 class="my-5"> Projet de la famille BOT </h3>
-                <table style="width:100%" class="table table-striped table-hover">
-                    <tr class="text-success bg-dark">
-                      <th class="shadow p-3 ">Column name</th>
-                      <th class="shadow p-3 ">Column name</th>
-                      <th class="shadow p-3 ">Column name</th>
-                      <th class="shadow p-3 ">Column name</th>
-                      <th class="shadow p-3 "></th>
-
-                    </tr>
-
-                    <tr>
-
-                        <?php 
-                        // foreach($resultsAll as $each => $resultsAll ){
-
-                        //     $firstname = $resultsAll['first_name'];
-                        //     $lastname = $resultsAll['last_name'];
-                        //     $email = $resultsAll['email'];
-
-                        //     echo '<tr >'
-                        //     .'<td class="m-5 p-4 " > ' . $firstname . ' ' . ' </td>'
-                        //     .'<td class="m-5 p-4 " > ' . $lastname . ' ' . ' </td>'
-                        //     .'<td class="m-5 p-4 " >' .$email 
-                        //     .'<td class="m-5 p-4 text-info bg-dark" ><a href="./ clientsDetailsPage.php" type="button" class="btn     btn-outline-info">Details</button> </td>'. '</tr>';
-                        // }  
-                        ?>
-                    </tr>    
-                </table>       
+                      
             </div><!-- /.row -->
         </main> <!-- /.container -->
-
-        <!-- Footer -->
-        <footer class="py-5 bg-dark">
-            <div class="container">
-              <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-            </div> <!-- /.container -->
-        </footer>
 
         <!-- Bootstrap core JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>

@@ -81,7 +81,7 @@ for($i=0;$i<$count;$i++){
                             .'<td class="m-5 p-4 " > ' . $lastname . ' ' . ' </td>'
                             .'<td class="m-5 p-4 " >' .$email 
                             .'<td class="m-5 p-4 text-info bg-dark" >
-                                <a href="./ clientsDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
+                                <a href="./clientsDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
                         }  
                         ?>
                     </tr>    
