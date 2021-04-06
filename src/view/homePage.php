@@ -37,7 +37,18 @@ $resultCompanie = $companie->getFiveCompanies();
             <div class="container allPage">
                 <h1>Welcome to COGIP !</h1>
 
-                <p>Bonjour !</p> <!--Display the user's name -->
+                <form action="homePage.php" method="post">
+                    <p>
+                        <input type="text" name="name"/>
+                        <input type="submit" value="Connect"/>
+                    </p>
+                </form>
+
+                <?php
+                    $_SESSION['login'] = $_POST['name'];
+                ?>
+
+                <p>Bonjour <?php echo $_SESSION['login']; ?> !</p> <!--Display the user's name -->
 
 
                 <!-- === Display the last five invoices === -->
