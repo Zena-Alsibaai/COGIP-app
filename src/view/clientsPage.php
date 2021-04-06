@@ -7,7 +7,27 @@ require '../model/ClientsManager.php';
 $Clients = new ClientsManager;
 $resultsAll = $Clients->getAllUsers();
 
+// foreach($resultsAll as $each => $resultsAll ){
+    
+// }
 
+// $count = count($resultsAll);
+// echo $count;
+
+/*
+for($i=0;$i<$count;$i++){ 
+        $firstname['first_name'] = $resultsAll;
+        $lastname = $resultsAll['last_name'];
+        $email = $resultsAll['email']; 
+        //var_dump( $firstname);
+        
+    }; */
+
+// green = success 
+// red = danger 
+// orange = warning 
+// blue = primary 
+// light blue = info 
 
 ?>
 <!DOCTYPE html>
@@ -21,99 +41,63 @@ $resultsAll = $Clients->getAllUsers();
     </head>
 
     <body>
-
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-</nav> -->
-    <header class="py-5 bg-dark">
-        <div class="container">
-          <p class="m-0 text-center text-white"><h1 class="m-4 p-5 border border-5 border-info rounded-pill text-center text-uppercase fw-bold bg-white display-1">Client Page</h1></p>
-        </div>
-
-  <!-- /.container -->
-    </header>
-
-   <!-- Page Content -->
-   <div class="container">
-
-    <div class="row">
-
-    <div class="c">
-    
-    <div class="list-group text-center">
-
-    <h3 class="my-5"> Projet de la famille BOT </h3>
-
-    <table style="width:100%" class="table table-striped table-hover">
-        <tr class="text-info bg-dark">
-          <th class="shadow p-3 ">Firstname</th>
-          <th class="shadow p-3 ">Lastname</th>
-          <th class="shadow p-3 ">Email</th>
-          <th class="shadow p-3 "></th>
-          
-        </tr>
-
-        <tr class="table shadow rounded  m-5 p-4 bg-danger" >
+        <!-- Header-->
+        <header class="py-5 bg-dark">
         
-            <?php 
-                //echo "Coucou famille Bot". '<br>';
-                foreach($resultsAll as $each => $resultsAll ){
-                    echo '<tr >'
-                    .'<td class="m-5 p-4 " > ' . $resultsAll['first_name'] . ' ' . ' </td>'
-                    .'<td class="m-5 p-4 " > ' . $resultsAll['last_name'] . ' ' . ' </td>'
-                    .'<td class="m-5 p-4 " >' .$resultsAll['email'] 
-                    .'<td class="m-5 p-4 text-info bg-dark" ><button type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
-                }
+            <div class="container">
+                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-1">Name Page</h1>
+            </div>
+        </header>
+
+       <!-- Page Content -->
+        <main class="container">
+            <div class="row list-group text-center">
+
                 
-             ?>
-        </tr>
+    
+                <h3 class="my-5"> Projet de la famille BOT </h3>
+                <table style="width:100%" class="table table-striped table-hover">
+                    <tr class="text-warning bg-dark">
+                      <th class="shadow p-3 ">Column name</th>
+                      <th class="shadow p-3 ">Column name</th>
+                      <th class="shadow p-3 ">Column name</th>
+                      <th class="shadow p-3 ">Column name</th>
+                      <th class="shadow p-3 "></th>
 
-    </table>
+                    </tr>
 
-    </div>
-    </div>
-  <!-- /.col-lg-3 -->
+                    <tr >
 
-    </div>
+                        <?php 
+                        foreach($resultsAll as $each => $resultsAll ){
 
-</div>
-<!-- /.container -->
+                            $firstname = $resultsAll['first_name'];
+                            $lastname = $resultsAll['last_name'];
+                            $email = $resultsAll['email'];
 
-<!-- Footer -->
-<footer class="py-5 bg-dark">
-  <div class="container">
-    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-  </div>
+                            echo '<tr >'
+                            .'<td class="m-5 p-4 " > ' . $firstname . ' ' . ' </td>'
+                            .'<td class="m-5 p-4 " > ' . $firstname . ' ' . ' </td>'
+                            .'<td class="m-5 p-4 " > ' . $lastname . ' ' . ' </td>'
+                            .'<td class="m-5 p-4 " >' .$email 
+                            .'<td class="m-5 p-4 text-info bg-dark" >
+                                <a href="./ clientsDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
+                        }  
+                        ?>
+                    </tr>    
+                </table>       
+            </div><!-- /.row -->
+        </main> <!-- /.container -->
 
-  <!-- /.container -->
-</footer>
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+            <div class="container">
+              <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+            </div> <!-- /.container -->
+        </footer>
 
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
     </body>
 </html>
