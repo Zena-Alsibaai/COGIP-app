@@ -82,6 +82,6 @@ $resultsAll = $invoices->getAllUsers();
 </section>
 
 </main>
-    
+            <?php include('./includes/footer.php'); ?>
 </body>
 </html>
