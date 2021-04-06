@@ -25,7 +25,7 @@ $resultsSuppliers= $Companies-> getCompaniesSuppliers();
      <header class="py-5 bg-dark">
         
         <div class="container">
-            <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-1">Companies Page</h1>
+            <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-1">COGIP : Companies Directory</h1>
             
         </div>
     </header>
@@ -45,7 +45,7 @@ $resultsSuppliers= $Companies-> getCompaniesSuppliers();
             </tr>
             <tr >
                 <?php 
-                    foreach($resultsAll as $each => $resultsAll){
+                    foreach($resultsAll as  $resultsAll){
                         $companiesName = $resultsAll['name_companies'];
                         $vatNumber= $resultsAll['vat_number'];
                         $country = $resultsAll['country'];
@@ -55,7 +55,7 @@ $resultsSuppliers= $Companies-> getCompaniesSuppliers();
                         .'<td class="m-5 p-4 " > ' . $vatNumber . ' ' . ' </td>'
                         .'<td class="m-5 p-4 " > ' . $country . ' ' . ' </td>'
                         .'<td class="m-5 p-4 text-info bg-dark" >
-                        <a href="./ companiesDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
+                        <a href="companiesDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
                         }  
                 ?>
             </tr> 
@@ -83,7 +83,7 @@ $resultsSuppliers= $Companies-> getCompaniesSuppliers();
                         .'<td class="m-5 p-4 " > ' . $suppliersVatNumber. ' ' . ' </td>'
                         .'<td class="m-5 p-4 " > ' . $suppliersCountry . ' ' . ' </td>'
                         .'<td class="m-5 p-4 text-info bg-dark" >
-                        <a href="./ companiesDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
+                        <a href="companiesDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
                         }  
                 ?>
             </tr> 
