@@ -5,9 +5,10 @@
 }
 html{
     font-size: 62.5%;
+    
 }
 
-header{
+nav{
     width: 100vw;
     height: 20rem;
     display: flex;
@@ -19,9 +20,9 @@ header{
 .logoOutline{
     width: 15rem;
     height: 15rem;
-    background-color: lightblue;
+    background-color: rgb(206, 183, 52);
     color: black;
-    margin: 2.5rem 13rem;
+    margin: 2.5rem;
     position: relative;
 }
 
@@ -96,4 +97,6 @@ a{
    margin-right: 4rem;
 }
 
-
+body{
+    background-color: red;
+}
