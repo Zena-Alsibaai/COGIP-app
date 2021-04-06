@@ -49,7 +49,7 @@ for($i=0;$i<$count;$i++){
             </div>
         </header>
 
-       <!-- Page Content -->
+    <!-- Page Content -->
         <main class="container">
             <div class="row list-group text-center">
 
@@ -58,11 +58,11 @@ for($i=0;$i<$count;$i++){
                 <h3 class="my-5"> Projet de la famille BOT </h3>
                 <table style="width:100%" class="table table-striped table-hover">
                     <tr class="text-warning bg-dark">
-                      <th class="shadow p-3 ">Column name</th>
-                      <th class="shadow p-3 ">Column name</th>
-                      <th class="shadow p-3 ">Column name</th>
-                      <th class="shadow p-3 ">Column name</th>
-                      <th class="shadow p-3 "></th>
+                        <th class="shadow p-3 ">Column name</th>
+                        <th class="shadow p-3 ">Column name</th>
+                        <th class="shadow p-3 ">Column name</th>
+                        <th class="shadow p-3 ">Column name</th>
+                        <th class="shadow p-3 "></th>
 
                     </tr>
 
@@ -92,7 +92,7 @@ for($i=0;$i<$count;$i++){
         <!-- Footer -->
         <footer class="py-5 bg-dark">
             <div class="container">
-              <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+                <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
             </div> <!-- /.container -->
         </footer>
 
