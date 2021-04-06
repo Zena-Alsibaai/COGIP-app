@@ -1,11 +1,4 @@
 <?php
-<<<<<<< HEAD
-    require '../src/model/CompaniesManager.php';
-    require '../src/model/ClientsManager.php';
-    require '../src/model/InvoicesManager.php';
-
-    echo "coucou";
-=======
     require_once './model/Manager.php';
 
     require_once './model/User.php';
@@ -22,7 +15,6 @@
     echo "coucou";
  
 
->>>>>>> 7df4f0421c91e2c35c6253388667e341c6f8b647
 ?>
 <!DOCTYPE html>
 <html lang="en">

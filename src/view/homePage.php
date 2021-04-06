@@ -29,128 +29,112 @@ $resultCompanie = $companie->getFiveCompanies();
 
     <body>
 
-        <header>
-
-        </header>
+        <?php
+            require 'includes/navbar.php'
+        ?>
 
         <main>
-            <div class="container allPage">
-                <h1>Welcome to COGIP !</h1>
-
-                <form action="homePage.php" method="post">
-                    <p>
-                        <input type="text" name="name"/>
-                        <input type="submit" value="Connect"/>
-                    </p>
-                </form>
-
-                <?php
-                    $_SESSION['login'] = $_POST['name'];
-                ?>
-
-                <p>Bonjour <?php echo $_SESSION['login']; ?> !</p> <!--Display the user's name -->
-
-
-                <!-- === Display the last five invoices === -->
-                <div class="container invoice_display">
-                    <h4>Last Invoice :</h4>
-
-                    <table>
-                        <tr>
-                        <th><h5>Number Of Invoices</h5></th>
-                        <th> | </th>
-                        <th><h5>Date Of Invoices</h5></th>
-                        <th> | </th>
-                        <th><h5>ID Of Companies</h5></th>
-                        </tr>
-                        <?php
-                            foreach($resultInvoice as $key => $resultInvoice) {
-                                echo '<tr>' .
-                                    '<td>' . $resultInvoice["number_of_invoices"] . '</td>' .
-                                    '<td> | </td>' .
-                                    '<td>' . $resultInvoice["date"] . '</td>' .
-                                    '<td> | </td>' .
-                                    '<td>' . $resultInvoice["name_companies"] . '</td>' .
-                                '</tr>';
-                            }
-                        ?>
-                    </table>
-                </div>
-
-                </br>
-
-                <!-- === Display the last five clients === -->
-                <div class="container Clients_display">
-                    <h4>Last Clients :</h4>
-
-                    <table>
-                        <tr>
-                            <th><h5>First Name</h5></th>
-                            <th> | </th>
-                            <th><h5>Last Name</h5></th>
-                            <th> | </th>
-                            <th><h5>Email</h5></th>
-                            <th> | </th>
-                            <th><h5>ID Of Companies</h5></th>
-                        </tr>
-                        <?php
-                            foreach($resultClient as $key => $resultClient) {
-                                echo '<tr>' .
-                                    '<td>' . $resultClient["first_name"] . '</td>' .
-                                    '<td> | </td>' .
-                                    '<td>' . $resultClient["last_name"] . '</td>' .
-                                    '<td> | </td>' .
-                                    '<td>' . $resultClient["email"] . '</td>' .
-                                    '<td> | </td>' .
-                                    '<td>' . $resultClient["name_companies"] . '</td>' .
-                                '</tr>';
-                            }
-                        ?>
-                    </table>
-
-                </div>
-                
-                </br>
-
-                <!-- === Display the last five companies === -->
-                <div class="container Companies_display">
-                    <h4>Last Companies :</h4>
-
-                    <table>
-                        <tr>
-                            <th><h5>Name Of Companies</h5></th>
-                            <th> | </th>
-                            <th><h5>Country</h5></th>
-                            <th> | </th>
-                            <th><h5>TVA Numer</h5></th>
-                            <th> | </th>
-                            <th><h5>Types</h5></th>
-                        </tr>
-                        <?php
-                            foreach($resultCompanie as $key => $resultCompanie) {
-                                echo '<tr>' .
-                                    '<td>' . $resultCompanie["name_companies"] . '</td>' .
-                                    '<td> | </td>' .
-                                    '<td>' . $resultCompanie["country"] . '</td>' .
-                                    '<td> | </td>' .
-                                    '<td>' . $resultCompanie["vat_number"] . '</td>' .
-                                    '<td> | </td>' .
-                                    '<td>' . $resultCompanie["types_of"] . '</td>' .
-                                '</tr>';
-                            }
-                        ?>
-                    </table>
-
-                </div>
-
-                </br>
-                
+            <div class="container">
+                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-1">Home Page</h1>
             </div>
+
+            <h2 class="text-center">Welcome to COGIP !</h2>
+
+            <!-- ==== Display the last five invoices ==== -->
+            <div class="row list-group text-center">
+                <h3 class="my-5"> Last Invoices : </h3>
+                <table style="width:100%" class="table table-striped table-hover">
+                    <tr class="text-warning bg-dark">
+                        <th class="shadow p-3 ">Number Of Invoices</th>
+                        <th class="shadow p-3 ">Date Of Invoices</th>
+                        <th class="shadow p-3 ">Names Of Companies</th>
+                        <th class="shadow p-3 "></th>
+
+                    </tr>
+
+                    <tr >
+
+                        <?php 
+                        foreach($resultInvoice as $each => $resultInvoice ){
+
+                            echo '<tr >'
+                            .'<td class="m-5 p-4 " > ' . $resultInvoice["number_of_invoices"] . ' ' . ' </td>'
+                            .'<td class="m-5 p-4 " > ' . $resultInvoice["date"] . ' ' . ' </td>'
+                            .'<td class="m-5 p-4 " > ' . $resultInvoice["name_companies"] . ' ' . ' </td>' 
+                            .'<td class="m-5 p-4 text-info bg-dark" >
+                                <a href="./ clientsDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
+                        }  
+                        ?>
+                    </tr>    
+                </table>       
+            </div><!-- /.row -->
+
+            <!-- ==== Display the last five clients ==== -->
+            <div class="row list-group text-center">
+                <h3 class="my-5"> Last Clients : </h3>
+                <table style="width:100%" class="table table-striped table-hover">
+                    <tr class="text-warning bg-dark">
+                        <th class="shadow p-3 ">First Name</th>
+                        <th class="shadow p-3 ">Last Name</th>
+                        <th class="shadow p-3 ">Email</th>
+                        <th class="shadow p-3 ">Names Of Companies</th>
+                        <th class="shadow p-3 "></th>
+
+                    </tr>
+
+                    <tr >
+
+                        <?php 
+                        foreach($resultClient as $each => $resultClient ){
+
+                            echo '<tr >'
+                            .'<td class="m-5 p-4 " > ' . $resultClient["first_name"] . ' ' . ' </td>'
+                            .'<td class="m-5 p-4 " > ' . $resultClient["last_name"] . ' ' . ' </td>'
+                            .'<td class="m-5 p-4 " > ' . $resultClient["email"] . ' ' . ' </td>' 
+                            .'<td class="m-5 p-4 " > ' . $resultClient["name_companies"] . ' ' . ' </td>' 
+                            .'<td class="m-5 p-4 text-info bg-dark" >
+                                <a href="./ clientsDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
+                        }  
+                        ?>
+                    </tr>    
+                </table>       
+            </div><!-- /.row -->
+
+            <!-- ==== Display the last five companies ==== -->
+            <div class="row list-group text-center">
+                <h3 class="my-5"> Last Companies : </h3>
+                <table style="width:100%" class="table table-striped table-hover">
+                    <tr class="text-warning bg-dark">
+                        <th class="shadow p-3 ">Name Of Companies</th>
+                        <th class="shadow p-3 ">Country</th>
+                        <th class="shadow p-3 ">TVA Numer</th>
+                        <th class="shadow p-3 ">Types</th>
+                        <th class="shadow p-3 "></th>
+
+                    </tr>
+
+                    <tr >
+
+                        <?php 
+                        foreach($resultCompanie as $each => $resultCompanie ){
+
+                            echo '<tr >'
+                            .'<td class="m-5 p-4 " > ' . $resultCompanie["name_companies"] . ' ' . ' </td>'
+                            .'<td class="m-5 p-4 " > ' . $resultCompanie["country"] . ' ' . ' </td>'
+                            .'<td class="m-5 p-4 " > ' . $resultCompanie["vat_number"] . ' ' . ' </td>' 
+                            .'<td class="m-5 p-4 " > ' . $resultCompanie["types_of"] . ' ' . ' </td>' 
+                            .'<td class="m-5 p-4 text-info bg-dark" >
+                                <a href="./ clientsDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
+                        }  
+                        ?>
+                    </tr>    
+                </table>       
+            </div><!-- /.row -->
         </main>
 
-        <footer>
-
-        </footer>
+        <?php
+            require 'includes/footer.php'
+        ?>
 
     </body>
 </html>
