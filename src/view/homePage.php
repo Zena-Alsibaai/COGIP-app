@@ -33,10 +33,13 @@ $resultCompanie = $companie->getFiveCompanies();
             require 'includes/navbar.php'
         ?>
 
-        <main>
+        <header class="py-5 bg-dark">
             <div class="container">
                 <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-1">Home Page</h1>
             </div>
+        </header>
+
+        <main>
 
             <h2 class="text-center">Welcome to COGIP !</h2>
 
