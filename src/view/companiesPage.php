@@ -20,65 +20,81 @@ $resultsSuppliers= $Companies-> getCompaniesSuppliers();
     <title>Companies</title>
 </head>
 <body>
-    <main>
+    <?php require 'includes/navbar.php' ?>
+     <!-- Header-->
+     <header class="py-5 bg-dark">
+        
+        <div class="container">
+            <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-1">Companies Page</h1>
+            
+        </div>
+    </header>
+    <!-- Page Content -->
+    <main class="container">
     
-    <div class="container">
-        <H1 class="text-center my-5">Coucou famille Bot</H1>
+    <div class="row list-group text-center">
+
+        <h2 class="my-5">Clients :</h2>
+        
+        <table style="width:100%" class="table table-striped table-hover">
+           <tr class="text-warning bg-dark">
+                <th class="shadow p-3 ">Name : </th>
+                <th class="shadow p-3 ">TVA : </th>
+                <th class="shadow p-3 ">Country : </th>
+                <th class="shadow p-3 "></th>
+            </tr>
+            <tr >
+                <?php 
+                    foreach($resultsAll as $each => $resultsAll){
+                        $companiesName = $resultsAll['name_companies'];
+                        $vatNumber= $resultsAll['vat_number'];
+                        $country = $resultsAll['country'];
+                        
+                        echo '<tr >'
+                        .'<td class="m-5 p-4 " > ' . $companiesName . ' ' . ' </td>'
+                        .'<td class="m-5 p-4 " > ' . $vatNumber . ' ' . ' </td>'
+                        .'<td class="m-5 p-4 " > ' . $country . ' ' . ' </td>'
+                        .'<td class="m-5 p-4 text-info bg-dark" >
+                        <a href="./ companiesDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
+                        }  
+                ?>
+            </tr> 
+        </table>
+
+        <table style="width:100%" class="table table-striped table-hover">
+        
+            <h2 class="my-5">Suppliers :</h2>
+        
+           <tr class="text-warning bg-dark">
+                <th class="shadow p-3 ">Name : </th>
+                <th class="shadow p-3 ">TVA : </th>
+                <th class="shadow p-3 ">Country : </th>
+                <th class="shadow p-3 "></th>
+            </tr>
+            <tr >
+                <?php 
+                    foreach($resultsSuppliers as $result){
+                        $suppliersCompaniesName = $result['name_companies'];
+                        $suppliersVatNumber= $result['vat_number'];
+                        $suppliersCountry = $result['country'];
+                        
+                        echo '<tr >'
+                        .'<td class="m-5 p-4 " > ' . $suppliersCompaniesName . ' ' . ' </td>'
+                        .'<td class="m-5 p-4 " > ' . $suppliersVatNumber. ' ' . ' </td>'
+                        .'<td class="m-5 p-4 " > ' . $suppliersCountry . ' ' . ' </td>'
+                        .'<td class="m-5 p-4 text-info bg-dark" >
+                        <a href="./ companiesDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
+                        }  
+                ?>
+            </tr> 
+        </table>
 
        
-            <div class="row align-items-center  ">
-            <h4>Clients</h4>
-                <div class="col">
-                    <h5 class="my-4">Name :</h5>
-                    <?php foreach ($resultsAll as $result ){
-                            echo $result['name_companies'] .'</br>'; 
-                    }
-                    ?>
-                </div>
-                <div class="col">
-                    <h5  class="my-4">Country :</h5>
-                    <?php foreach ($resultsAll as $result){
-                            echo $result['country'] .'</br>'; 
-                    }
-                    ?>
-                </div>
-                <div class="col">
-                    <h4  class="my-4">TVA :</h4>
-                    <?php foreach ($resultsAll as $result ){
-                            echo $result['vat_number'].'</br>'; 
-                    }
-                    ?>
-                </div>
-            </div>
-
-            <div class="row align-items-center  ">
-            <h4>Suppliers</h4>
-                <div class="col">
-                    <h5 class="my-4">Name :</h5>
-                    <?php foreach ($resultsSuppliers as $result ){
-                            echo $result['name_companies'] .'</br>'; 
-                    }
-                    ?>
-                </div>
-                <div class="col">
-                    <h5  class="my-4">Country :</h5>
-                    <?php foreach ($resultsSuppliers as $result){
-                            echo $result['country'] .'</br>'; 
-                    }
-                    ?>
-                </div>
-                <div class="col">
-                    <h4  class="my-4">TVA :</h4>
-                    <?php foreach ($resultsSuppliers as $result ){
-                            echo $result['vat_number'].'</br>'; 
-                    }
-                    ?>
-                </div>
-            </div>
+           
             
     </div>
     </main>
  
-            
+    <?php require 'includes/footer.php' ?>     
 </body>
 </html>

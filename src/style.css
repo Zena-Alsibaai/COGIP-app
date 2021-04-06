@@ -1,99 +1,92 @@
-*,::before,::after{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
-html{
-    font-size: 62.5%;
+html {
+	font-size: 62.5%;
 }
 
-header{
-    width: 100vw;
-    height: 20rem;
-    display: flex;
-    flex-direction: row;
-    
+header {
+	width: 100vw;
+	height: 20rem;
+	display: flex;
+	flex-direction: row;
 }
 
 /* HEADER */
-.logoOutline{
-    width: 15rem;
-    height: 15rem;
-    background-color: lightblue;
-    color: black;
-    margin: 2.5rem 13rem;
-    position: relative;
+.logoOutline {
+	width: 15rem;
+	height: 15rem;
+	background-color: lightblue;
+	color: black;
+	margin: 2.5rem 13rem;
+	position: relative;
 }
 
-.logoImage{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 1.6rem;
-
+.logoImage {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.6rem;
 }
 
-.placementLink{
-display: flex;
-flex-direction: row;
-
-
+.placementLink {
+	display: flex;
+	flex-direction: row;
 }
-.linkMenu{
-    width: auto;
-    height: 2rem;
-    margin: 10rem 2rem;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: lightblue;
-    cursor: pointer;
+.linkMenu {
+	width: auto;
+	height: 2rem;
+	margin: 10rem 2rem;
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: lightblue;
+	cursor: pointer;
 }
 
-
-.link{
-    padding: .5rem;
-    text-decoration: none;
-    color: black;
-    font-size: 1.6rem;
+.link {
+	padding: 0.5rem;
+	text-decoration: none;
+	color: black;
+	font-size: 1.6rem;
 }
 
 /* MAIN */
 
-.titleInvoices{
-    padding: 1.5rem;
-    text-align: center;
-} 
-h1{
-    font-size: 3.5rem;
+.titleInvoices {
+	padding: 1.5rem;
+	text-align: center;
+}
+h1 {
+	font-size: 3.5rem;
 }
 
-.allData{
-    display: flex;
-    flex-direction: row;
-    padding: 7rem;
-    margin-left: 10vw;
-    font-size: 1.8rem;
-    
+.allData {
+	display: flex;
+	flex-direction: row;
+	padding: 7rem;
+	margin-left: 10vw;
+	font-size: 1.8rem;
 }
-.data{
-    padding: 1rem;
-    margin-right: 4rem;
-    border-right: dashed;
-    
+.data {
+	padding: 1rem;
+	margin-right: 4rem;
+	border-right: dashed;
 }
-a{
-    text-decoration: none;
+a {
+	text-decoration: none;
 }
 
-.dates{
-    position: relative;
+.dates {
+	position: relative;
 }
 
-.alignement{
-   margin-right: 4rem;
+.alignement {
+	margin-right: 4rem;
 }
-
-
