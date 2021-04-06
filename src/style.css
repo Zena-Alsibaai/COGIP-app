@@ -15,6 +15,7 @@ header{
     
 }
 
+/* HEADER */
 .logoOutline{
     width: 15rem;
     height: 15rem;
@@ -51,12 +52,16 @@ flex-direction: row;
     cursor: pointer;
 }
 
+
 .link{
     padding: .5rem;
     text-decoration: none;
     color: black;
     font-size: 1.6rem;
 }
+
+/* MAIN */
+
 .titleInvoices{
     padding: 1.5rem;
     text-align: center;
@@ -90,3 +95,5 @@ a{
 .alignement{
    margin-right: 4rem;
 }
+
+

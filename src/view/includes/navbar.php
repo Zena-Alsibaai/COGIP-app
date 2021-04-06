@@ -10,21 +10,22 @@
 </head>
 <body>
     
-<header class="header">
+<nav class="header">
 <div class="logoOutline">
 <div class="logoImage">
 GOGIB </br> LOGO
 </div>
-
 </div>
+
 <div class="placementLink">
-<div class="linkMenu"><a class='link' href="#">Home</a></div>
-<div class="linkMenu"><a class='link' href="#">Invoices</a></div>
-<div class="linkMenu"><a class='link' href="#">Companies</a></div>
-<div class="linkMenu"><a class='link' href="#">Contacts</a></div>
+<div class="linkMenu"><a class='link' href="./homePage.php">Home</a></div>
+<div class="linkMenu"><a class='link' href="./invoicesPage.php">Invoices</a></div>
+<div class="linkMenu"><a class='link' href="./companiesPage.php">Companies</a></div>
+<div class="linkMenu"><a class='link' href="./clientsPage.php">Contacts</a></div>
+<div class="linkMenu"><a class="link" href="#">Inscription</a></div>
 <div class="linkMenu"><a class='link' href="#">Connexion</a></div>
 </div>
-</header>
+</nav>
 
 
 

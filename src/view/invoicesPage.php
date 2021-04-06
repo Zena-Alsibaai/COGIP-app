@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 require_once '../model/InvoicesManager.php';
 
+$invoices = new InvoicesManager();
+$resultsAll = $invoices->getAllUsers();
 
 ?>
 
@@ -13,10 +15,11 @@ require_once '../model/InvoicesManager.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOGIP</title>
+    <link rel="stylesheet" href="../style.css">
+    <title>GOGIP-Invoices Page</title>
 </head>
 <body>
-<?php include('./includes/header.php'); ?>
+<?php include('./includes/navbar.php'); ?>
 <main>
 <div class="titleInvoices">
     <h1>COGIB : List of invoices</h1>
@@ -25,15 +28,15 @@ require_once '../model/InvoicesManager.php';
 <div class="data invoiceNumber">
     <h3>Invoice number</h3>
     <div>
-        <p class='alignement'><a  href="#">
+        <p class='alignement'><a  href="./detailInvoice.php">
+            <span>
             <?php 
-                $invoices = new InvoicesManager();
-                $resultsAll = $invoices->getAllUsers();
+                
                 foreach ($resultsAll as $key => $invoice) {
-                    //var_dump($product['productCode']);
                     echo $invoice['number_of_invoices']. '</br>'.'</br>';
                 }
             ?>
+            </span>
         </a></p>
     </div>
 </div>
@@ -43,7 +46,6 @@ require_once '../model/InvoicesManager.php';
         <p class='alignement'>
         <?php 
                 foreach ($resultsAll as $key => $date) {
-                    //var_dump($product['productCode']);
                     echo $date['date']. '</br>'.'</br>';
                 }
             ?>
@@ -55,10 +57,7 @@ require_once '../model/InvoicesManager.php';
     <div>
         <p class='alignement'>
         <?php 
-                $invoices = new InvoicesManager();
-                $resultsAll = $invoices->getAllUsers();
                 foreach ($resultsAll as $key => $companie) {
-                    //var_dump($product['productCode']);
                     echo $companie['name_companies']. '</br>'.'</br>';
                 }
             ?>
@@ -68,7 +67,15 @@ require_once '../model/InvoicesManager.php';
 <div class="data type">
     <h3>Type</h3>
     <div>
-        <p class='alignement'>fournisseur</p>
+        <p class='alignement'>
+        <?php
+
+                foreach($resultsAll as $key => $type){
+                    echo $type['types_of'] . '</br>' . '</br>' ;
+                }
+
+        ?>
+        </p>
     </div>
 </div>
 
