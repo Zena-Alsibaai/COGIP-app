@@ -5,11 +5,9 @@ declare(strict_types=1);
 require_once '../model/CompaniesManager.php';
 
 $Companies = new CompaniesManager;
-$resultsAll = $Companies->getAllCompanies();
-
-
-
-             
+$resultsAll = $Companies->getCompaniesClients(); 
+$resultsSuppliers= $Companies-> getCompaniesSuppliers();
+    
 ?>
 
 <!DOCTYPE html>
@@ -27,28 +25,60 @@ $resultsAll = $Companies->getAllCompanies();
     <div class="container">
         <H1 class="text-center my-5">Coucou famille Bot</H1>
 
-        <?php foreach ($resultsAll as $each => $resultsAll ): ?>
-            <div class="row align-items-center text-center ">
+       
+            <div class="row align-items-center  ">
+            <h4>Clients</h4>
                 <div class="col">
                     <h5 class="my-4">Name :</h5>
-                    <?php echo $resultsAll['name_companies'] ?>
-                </div>
-                <div class="col">
-                    <h5  class="my-4">TVA :</h5>
-                    <a href="#" ><?php echo $resultsAll['vat_number'] ?></a>
-        
+                    <?php foreach ($resultsAll as $result ){
+                            echo $result['name_companies'] .'</br>'; 
+                    }
+                    ?>
                 </div>
                 <div class="col">
                     <h5  class="my-4">Country :</h5>
-                    <?php echo $resultsAll['country'] ?>
+                    <?php foreach ($resultsAll as $result){
+                            echo $result['country'] .'</br>'; 
+                    }
+                    ?>
                 </div>
-   
+                <div class="col">
+                    <h4  class="my-4">TVA :</h4>
+                    <?php foreach ($resultsAll as $result ){
+                            echo $result['vat_number'].'</br>'; 
+                    }
+                    ?>
+                </div>
             </div>
-        <?php endforeach; ?>
-     
 
+            <div class="row align-items-center  ">
+            <h4>Suppliers</h4>
+                <div class="col">
+                    <h5 class="my-4">Name :</h5>
+                    <?php foreach ($resultsSuppliers as $result ){
+                            echo $result['name_companies'] .'</br>'; 
+                    }
+                    ?>
+                </div>
+                <div class="col">
+                    <h5  class="my-4">Country :</h5>
+                    <?php foreach ($resultsSuppliers as $result){
+                            echo $result['country'] .'</br>'; 
+                    }
+                    ?>
+                </div>
+                <div class="col">
+                    <h4  class="my-4">TVA :</h4>
+                    <?php foreach ($resultsSuppliers as $result ){
+                            echo $result['vat_number'].'</br>'; 
+                    }
+                    ?>
+                </div>
+            </div>
+            
     </div>
     </main>
+ 
             
 </body>
 </html>
