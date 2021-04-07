@@ -1,16 +1,18 @@
 <?php
 declare(strict_types=1);
 
-require '../model/ClientsManager.php';
+//require '../model/ClientsManager.php';
 
-$Clients = new ClientsManager;
-$resultsAll = $Clients->getAllUsers();
+// $Clients = new ClientsManager;
+// $resultsAll = $Clients->getAllUsers();
 
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
+    <?php require "./includes/navbar.php" ?>
     <head>
         <meta charset="UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -32,6 +34,11 @@ $resultsAll = $Clients->getAllUsers();
             <div class="row list-group text-center">
     
                 <h3 class="my-5"> Projet de la famille BOT </h3>
+                <?php 
+                    require '../model/ClientsManager.php';
+                    $Client = new ClientsManager;
+                    $resultsAll = $Client->getSingleClient();
+                ?>
                       
             </div><!-- /.row -->
         </main> <!-- /.container -->
