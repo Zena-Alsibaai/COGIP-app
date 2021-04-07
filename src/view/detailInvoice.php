@@ -40,9 +40,8 @@ $resultsAll = $invoices->getAllUsers();
                 <h3 class="my-5"> Projet de la famille BOT </h3>
                 <h1>INVOICE: 
                     <?php 
+                       echo $resultsAll[0];
 
-                        $number_of_invoices = $resultsAll['number_of_invoices'];
-                        echo $number_of_invoices;
 
                     ?>
                 </h1>

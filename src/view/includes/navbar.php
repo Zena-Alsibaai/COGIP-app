@@ -18,7 +18,7 @@
 
 <div class="placementLink">
 <div class="linkMenu"><a class='link' href="./homePage.php">Home</a></div>
-<div class="linkMenu"><a class='link' href="./invoicesPage2.php">Invoices</a></div>
+<div class="linkMenu"><a class='link' href="./invoicesPage.php">Invoices</a></div>
 <div class="linkMenu"><a class='link' href="./companiesPage.php">Companies</a></div>
 <div class="linkMenu"><a class='link' href="./clientsPage.php">Contacts</a></div>
 <div class="linkMenu"><a class="link" href="#">Inscription</a></div>

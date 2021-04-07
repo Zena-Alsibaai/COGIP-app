@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require_once '../model/Manager.php';
+require_once '../model/manager.php';
 
 class InvoicesManager extends Manager{
 

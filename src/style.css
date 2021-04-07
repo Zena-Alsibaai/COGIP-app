@@ -18,11 +18,12 @@ nav{
 
 /* HEADER */
 .logoOutline{
+
     width: 15rem;
     height: 15rem;
-    background-color: rgb(206, 183, 52);
+    background-color: #ffc107;
     color: black;
-    margin: 2.5rem;
+    margin: 7rem 2.5rem;
     position: relative;
 }
 
@@ -49,7 +50,7 @@ flex-direction: row;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: lightblue;
+    background-color: #ffc107;
     cursor: pointer;
 }
 
@@ -97,6 +98,3 @@ a{
    margin-right: 4rem;
 }
 
-body{
-    background-color: red;
-}
