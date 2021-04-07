@@ -35,7 +35,7 @@ declare(strict_types=1);
     
                 <h3 class="my-5"> Projet de la famille BOT </h3>
                 <?php 
-                    require '../model/ClientsManager.php';
+                    require '../model/ContactManager.php';
                     $Client = new ClientsManager;
                     $resultsAll = $Client->getSingleClient();
                 ?>

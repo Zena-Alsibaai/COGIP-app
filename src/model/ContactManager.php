@@ -13,7 +13,8 @@ class ClientsManager extends Manager{
         $db = $this->connectDB();
         $statment = $db->prepare(
             "SELECT* 
-            FROM clients ");
+            FROM clients 
+            ORDER BY last_name ASC");
         $statment -> execute();
         
         // traitement de données récoltée dans la requete.

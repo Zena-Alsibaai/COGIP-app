@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require '../model/ClientsManager.php';
+require '../model/ContactManager.php';
 $Contacts = new ClientsManager;
 $resultsAll = $Contacts->getAllContacts();
 
@@ -45,7 +45,7 @@ for($i=0;$i<$count;$i++){
             
             <div class="container">
                 
-                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-1">Contacts Page</h1>
+                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4">Contacts Page</h1>
             </div>
         </header>
 
