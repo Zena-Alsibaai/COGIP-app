@@ -44,4 +44,43 @@ class HomeManager extends Manager {
         $resultsAll = $statment->fetchAll(PDO::FETCH_ASSOC);
         return $resultsAll;
     }
+
+    public function getAllContact() {
+        $statment = $this->connectDB()->query(
+            "SELECT * 
+            FROM clients c
+            INNER JOIN companies co
+            ON c.id_companies = co.id_companies
+            ORDER BY id_client");
+        
+        // traitement de données récoltée dans la requete.
+        $resultsAll = $statment->fetchAll(PDO::FETCH_ASSOC);
+        return $resultsAll;
+    }
+
+    public function getAllCompanies() {
+        $statment = $this->connectDB()->query(
+            "SELECT * 
+            FROM companies co
+            INNER JOIN types_of_companies T
+            ON co.id_types = T.id_types
+            ORDER BY id_companies");
+        
+        // traitement de données récoltée dans la requete.
+        $resultsAll = $statment->fetchAll(PDO::FETCH_ASSOC);
+        return $resultsAll;
+    }
+
+    public function getAllInvoices() {
+        $statment = $this->connectDB()->query(
+            "SELECT *
+            FROM invoices i
+            INNER JOIN companies co
+            ON i.id_companies = co.id_companies
+            ORDER BY id_invoices");
+        
+        // traitement de données récoltée dans la requete.
+        $resultsAll = $statment->fetchAll(PDO::FETCH_ASSOC);
+        return $resultsAll;
+    }
 }
