@@ -32,7 +32,7 @@
         <?php 
 
         $object = new ClientsManager;
-        echo $object->getAllUsers();
+        // echo $object->getAllUsers();
     
         ?>
 
