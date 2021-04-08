@@ -35,7 +35,7 @@ $resultCompanie = $companie->getFiveCompanies();
 
         <header class="py-5 bg-dark">
             <div class="container">
-                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-1">Home Page</h1>
+                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4">Home Page</h1>
             </div>
         </header>
 
@@ -72,9 +72,9 @@ $resultCompanie = $companie->getFiveCompanies();
                 </table>       
             </div><!-- /.row -->
 
-            <!-- ==== Display the last five clients ==== -->
+            <!-- ==== Display the last five Contacts ==== -->
             <div class="row list-group text-center">
-                <h3 class="my-5"> Last Clients : </h3>
+                <h3 class="my-5"> Last Contacts : </h3>
                 <table style="width:100%" class="table table-striped table-hover">
                     <tr class="text-warning bg-dark">
                         <th class="shadow p-3 ">First Name</th>

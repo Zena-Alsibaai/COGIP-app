@@ -23,7 +23,7 @@ GOGIB </br> LOGO
 <div class="linkMenu"><a class='link' href="./companiesPage.php">Companies</a></div>
 <div class="linkMenu"><a class='link' href="./clientsPage.php">Contacts</a></div>
 <div class="linkMenu"><a class="link" href="./inscriptionPage.php">Inscription</a></div>
-<div class="linkMenu"><a class='link' href="#">Connexion</a></div>
+<div class="linkMenu"><a class='link' href="./connexionPage.php">Connexion</a></div>
 </div>
 </nav>
 

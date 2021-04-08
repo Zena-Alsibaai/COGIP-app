@@ -25,20 +25,18 @@ require_once '../model/InscriptionManager.php';
 
         <header class="py-5 bg-dark">
             <div class="container">
-                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4">Sign Up</h1>
+                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4">Log In</h1>
             </div>
         </header>
 
         <main class="container bg-dark">
             <div class="container py-5 bg-dark text-center">
                 <form action="homePage.php" method="post">
-                    <input type="text" name="name" placeholder="Name"/>
+                    <input type="text" name="nameverif" placeholder="Your Name"/>
                     </br>
-                    <input type="password" name="pwd" placeholder="Password"/>
+                    <input type="password" name="pwdverif" placeholder="Your Password"/>
                     </br>
-                    <input type="password" name="pwdrepeat" placeholder="Repeat Password"/>
-                    </br>
-                    <input type="submit" name="submit" value="Sign Up"/>
+                    <input type="submit" name="submit" value="Log In"/>
                 </form>
             </div>
         </main>
