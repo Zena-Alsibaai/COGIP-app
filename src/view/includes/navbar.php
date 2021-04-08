@@ -9,32 +9,20 @@
     </head>
     <body>
 
-<<<<<<< HEAD
         <nav class="header">
             <div class="logoOutline">
                 <div class="logoImage">
                     <p class="logo"> GOGIB </br> LOGO </p>
                 </div>
             </div>
-=======
-<div class="placementLink">
-<div class="linkMenu"><a class='link' href="./homePage.php">Home</a></div>
-<div class="linkMenu"><a class='link' href="./invoicesPage.php">Invoices</a></div>
-<div class="linkMenu"><a class='link' href="./companiesPage.php">Companies</a></div>
-<div class="linkMenu"><a class='link' href="./clientsPage.php">Contacts</a></div>
-<div class="linkMenu"><a class="link" href="./inscriptionPage.php">Inscription</a></div>
-<div class="linkMenu"><a class='link' href="./connexionPage.php">Connexion</a></div>
-</div>
-</nav>
->>>>>>> abc240df833fe1eaefc7ba5eec1201fb6277871d
 
             <div class="placementLink">
                 <div class="linkMenu"><a class='link' href="./homePage.php">Home</a></div>
                 <div class="linkMenu"><a class='link' href="./invoicesPage.php">Invoices</a></div>
                 <div class="linkMenu"><a class='link' href="./companiesPage.php">Companies</a></div>
-                <div class="linkMenu"><a class='link' href="./clientsPage.php">Contacts</a></div>
-                <div class="linkMenu"><a class="link" href="#">Inscription</a></div>
-                <div class="linkMenu"><a class='link' href="#">Connexion</a></div>
+                <div class="linkMenu"><a class='link' href="./contactPage.php">Contacts</a></div>
+                <div class="linkMenu"><a class="link" href="./inscriptionPage.php">Inscription</a></div>
+                <div class="linkMenu"><a class='link' href="./connexionPage.php">Connexion</a></div>
             </div>
         </nav>
 
