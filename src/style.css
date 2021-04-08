@@ -17,18 +17,17 @@ nav {
 	flex-direction: row;
 } */
 
-.header{
+.header {
 	background-color: #212529;
 	display: flex;
 	flex-direction: row;
 }
 
-
 /* navbar */
-.logoOutline {	
+.logoOutline {
 	margin: 2rem;
 	display: flex;
-	align-items: center;	
+	align-items: center;
 }
 
 .logoImage {
@@ -41,11 +40,11 @@ nav {
 	border-radius: 45%;
 }
 
-.logo{
+.logo {
 	width: auto;
 	height: auto;
-	border:white double 10px;
-	padding: .5rem;
+	border: white double 10px;
+	padding: 0.5rem;
 	border-radius: 20px 0;
 }
 
@@ -54,11 +53,10 @@ nav {
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
-	
 }
 .linkMenu {
 	height: 2rem;
-	padding: .2rem 1rem;
+	padding: 0.2rem 1rem;
 	margin: 1rem;
 	display: flex;
 	align-items: center;
@@ -74,8 +72,22 @@ nav {
 	color: black;
 }
 
-
 a {
 	text-decoration: none;
 }
+.animation {
+	color: black;
+	letter-spacing: 8px;
+	animation: anim 2.5s 1;
+}
 
+@keyframes anim {
+	0% {
+		color: black;
+		margin-bottom: -40px;
+	}
+	30% {
+		letter-spacing: 25px;
+		margin-bottom: -40px;
+	}
+}
