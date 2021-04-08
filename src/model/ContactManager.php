@@ -45,4 +45,17 @@ class ClientsManager extends Manager{
         };
 
     }
+
+    public function getDetailContacts(){
+        $db = $this->connectDB();
+        $statment = $db->prepare(
+            "SELECT * 
+            FROM clients ");
+        //JOIN companies 
+        //ON contact_persons.comp_id = companies.comp_id
+    
+        $detail_contacts = $statment->fetchAll(PDO::FETCH_ASSOC);
+    
+        return $detail_contacts;
+    }
 }

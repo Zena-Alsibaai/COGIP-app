@@ -70,18 +70,22 @@ for($i=0;$i<$count;$i++){
                                 $firstname = $contact['first_name'];
                                 $lastname = $contact['last_name'];
                                 $email = $contact['email'];
+                                $idClient = $contact['id_client'];
+                                $indexSingle = $index;
+                                
                     
                                 echo '<tr >'
-                                .'<td class="m-5 p-4 " > '. $index .' - ' . $firstname . ' ' . ' </td>'
+                                .'<td class="m-5 p-4 " > '. $index .' - ' . $idClient .' - ' .$firstname . ' ' . ' </td>'
                                 .'<td class="m-5 p-4 " > ' . $lastname . ' ' . ' </td>'
                                 .'<td class="m-5 p-4 " >' .$email 
-                                .'<td class="m-5 p-4 text-info bg-dark" >
-                                    <a href="./clientsDetailsPage.php" type="button" class="btn btn-outline-info" name="details" value="<?php echo $index?>">Details</button> </td>'. '</tr>';
+                                .'<form action="" method="post"> <td class="m-5 p-4 text-info bg-dark" >
+                                    <a href="./contactDetailsPage.php?idIndex=1" type="button" class="btn btn-outline-info" name="more" value="<?php echo $contact[\'id_client\']; ?>">Details</button> </td></form>'. '</tr>';
                     
                             }
                         ?>
                     </tr>    
                 </table>  
+                
      
             </div><!-- /.row -->
         </main> <!-- /.container -->

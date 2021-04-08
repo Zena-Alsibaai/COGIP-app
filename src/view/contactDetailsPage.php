@@ -35,9 +35,41 @@ declare(strict_types=1);
     
                 <h3 class="my-5"> Projet de la famille BOT </h3>
                 <?php 
+                    // require '../model/ContactManager.php';
+                    // $Client = new ClientsManager;
+                    // $resultsAll = $Client->getDetailContacts();
+                ?>
+                <?php
+                if(isset($_GET['idIndex'])){	
+                    // foreach($Contact->getDetailContacts() as $detail_contacts){
+                    //     if($_POST['more']==$detail_contacts['id_client']){
+                    //         echo $contact['first_name'];
+                    //         echo $contact['last_name'];
+                    //         echo $contact['email'];
+                    //     }
+                    // }
+
+                    $idClient = $_GET['idIndex'];
+                    echo $idClient;
+
                     require '../model/ContactManager.php';
                     $Client = new ClientsManager;
-                    $resultsAll = $Client->getSingleClient();
+                    $resultsAll = $Client->getDetailContacts();
+
+                    foreach($resultsAll as $indexContact => $contactDetails ){
+
+                        $firstnameDetails = $contactDetails['first_name'];
+                        $lastnameDetails = $contactDetails['last_name'];
+                        $emailDetails = $contactDetails['email'];
+                        $idClientDetails = $contactDetails['id_client'];
+                        $indexSingleDetais = $indexContact;
+
+                        echo $firstnameDetails;
+                    }
+
+
+                }// end of if isset
+                
                 ?>
                       
             </div><!-- /.row -->
