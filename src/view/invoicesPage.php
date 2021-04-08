@@ -27,7 +27,7 @@ $resultsAll = $invoices->getAllUsers();
         <header class="py-5 bg-dark">
         
             <div class="container">
-                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-1">Invoices Page</h1>
+                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4">Invoices Page</h1>
             </div>
         </header>
 
@@ -59,13 +59,15 @@ $resultsAll = $invoices->getAllUsers();
                             $types_of = $resultsAll['types_of'];
 
                             echo '<tr >'
-                            .'<td class="m-5 p-4 " > ' . $number_of_invoices . ' ' . ' </td>'
+                            .'<td name="test" class="m-5 p-4 " > ' . $number_of_invoices . ' ' . ' </td>'
                             .'<td class="m-5 p-4 " > ' . $date. ' ' . ' </td>'
                             .'<td class="m-5 p-4 " > ' . $name_companies . ' ' . ' </td>'
                             .'<td class="m-5 p-4 " >' .$types_of 
                             .'<td class="m-5 p-4 text-info bg-dark" >
-                                <a href="#" name="details" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
+                                <a href="#" method="post" name="details" type="button" class="btn btn-outline-info">Details</a> </td>'. '</tr>';
                         }  
+                             
+
                         ?>
                     </tr>    
                 </table>       
@@ -75,10 +77,14 @@ $resultsAll = $invoices->getAllUsers();
         <section class="detail-invoices">
 
                         <h2 class="title-detail">
-                            <?php
+                            
                                 
-                                $btn = $_POST['details'];
-                                echo 'test';
+                            <?php
+
+                              
+                                
+                                    
+                                
                             ?>
                         </h2>
 
@@ -98,3 +104,4 @@ $resultsAll = $invoices->getAllUsers();
 
     </body>
 </html>
+
