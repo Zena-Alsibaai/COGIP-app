@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 require_once '../model/CompaniesManager.php';
-
+// calling the functions and classe in CompaniesManager file 
 $Companies = new CompaniesManager;
 $resultsAll = $Companies->getCompaniesClients(); 
 $resultsSuppliers= $Companies-> getCompaniesSuppliers();
@@ -23,9 +23,9 @@ $resultsSuppliers= $Companies-> getCompaniesSuppliers();
     <?php require 'includes/navbar.php' ?>
      <!-- Header-->
      <header class="py-5 bg-dark">
-        
+     
         <div class="container">
-            <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-1">COGIP : Companies Directory</h1>
+            <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4">COGIP : Companies Directory</h1>
             
         </div>
     </header>
@@ -47,16 +47,19 @@ $resultsSuppliers= $Companies-> getCompaniesSuppliers();
                 <?php 
                     foreach($resultsAll as  $resultsAll){
                         $companiesName = $resultsAll['name_companies'];
+                        $companiesId= $resultsAll['id_companies'];
                         $vatNumber= $resultsAll['vat_number'];
                         $country = $resultsAll['country'];
-                        
+
                         echo '<tr >'
                         .'<td class="m-5 p-4 " > ' . $companiesName . ' ' . ' </td>'
                         .'<td class="m-5 p-4 " > ' . $vatNumber . ' ' . ' </td>'
                         .'<td class="m-5 p-4 " > ' . $country . ' ' . ' </td>'
                         .'<td class="m-5 p-4 text-info bg-dark" >
-                        <a href="companiesDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
-                        }  
+                        <a href="companiesDetailsPage.php?id='.$companiesId.'" type="button" class="btn btn-outline-info">Details</a> </td>'. '</tr>';
+                        }
+                        // dans l'URL on ajoute?id= pour qu'on puisse aller chercher les info de chaque id  
+
                 ?>
             </tr> 
         </table>
@@ -83,8 +86,10 @@ $resultsSuppliers= $Companies-> getCompaniesSuppliers();
                         .'<td class="m-5 p-4 " > ' . $suppliersVatNumber. ' ' . ' </td>'
                         .'<td class="m-5 p-4 " > ' . $suppliersCountry . ' ' . ' </td>'
                         .'<td class="m-5 p-4 text-info bg-dark" >
-                        <a href="companiesDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
-                        }  
+                        <a href="companiesDetailsPage.php?id='.$companiesId.'" type="button" class="btn btn-outline-info">Details</a> </td>'. '</tr>'
+                        ;
+                        
+                    }  
                 ?>
             </tr> 
         </table>
