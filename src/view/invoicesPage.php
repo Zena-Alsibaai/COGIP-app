@@ -13,7 +13,7 @@
         <!-- Header-->
         <header class="py-5 bg-dark">
             <div class="container">
-                <h1 class=" animation m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4  ">Invoices Page</h1>
+                <h1 class=" animation m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4  ">Invoices</h1>
             </div>
         </header>
        <!-- Page Content -->
