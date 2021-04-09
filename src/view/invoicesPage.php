@@ -1,15 +1,3 @@
-
-<?php 
-
-require_once '../model/InvoicesManager.php';
-
-$invoices = new InvoicesManager();
-$resultsAll = $invoices->getAllUsers();
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,26 +6,19 @@ $resultsAll = $invoices->getAllUsers();
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../style.css">
-        <title>Document</title>
+        <title>COGIP: Invoices</title>
     </head>
-
     <body>
-
          <?php include('./includes/navbar.php') ?> 
         <!-- Header-->
         <header class="py-5 bg-dark">
-        
             <div class="container">
-                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4">Invoices Page</h1>
+                <h1 class=" animation m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4  ">Invoices Page</h1>
             </div>
         </header>
-
        <!-- Page Content -->
         <main class="container">
             <div class="row list-group text-center">
-
-                
-    
                 <h3 class="my-5"> Projet de la famille BOT </h3>
                 <table style="width:100%" class="table table-striped table-hover">
                     <tr class="text-warning bg-dark">
@@ -46,40 +27,38 @@ $resultsAll = $invoices->getAllUsers();
                       <th class="shadow p-3 ">Companies</th>
                       <th class="shadow p-3 ">Type</th>
                       <th class="shadow p-3 "></th>
-
                     </tr>
-
                     <tr >
-
-                        <?php 
-                        foreach($resultsAll as $each => $resultsAll ){
-                            echo '<tr >'
-                            .'<td name="test" class="m-5 p-4 " > ' . $resultsAll['number_of_invoices']. ' ' . ' </td>'
-                            .'<td class="m-5 p-4 " > ' . $resultsAll['date']. ' ' . ' </td>'
-                            .'<td class="m-5 p-4 " > ' . $resultsAll['name_companies']. ' ' . ' </td>'
-                            .'<td class="m-5 p-4 " >' .$resultsAll['types_of']
-                            .'<td class="m-5 p-4 text-info bg-dark" >
-                                <a href="./detailInvoices.php?id='. $resultsAll['id_invoices'] .'" method="post" name="details" type="button" class="btn btn-outline-info">Details</a> </td>'. '</tr>';
-                        }  
-                            
-                        ?>
+                     <?php 
+                     include('./includes/dataTableInvoicesPage.php')
+                     ?>
                     </tr>    
                 </table>       
             </div><!-- /.row -->
         </main> <!-- /.container -->
-                        <table style="width:100%" class="table table-striped table-hover">
-                            <tr class="text-warning bg-dark">
-                            </tr>
-                        </table>
-        </section>
         <!-- Bootstrap core JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     </body>
 </html>
+
+
+
+        
+
+                
+
+    
+
+
                             
                             
 
+                            
+
                              
+
+
+
 
 
 

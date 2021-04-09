@@ -25,7 +25,6 @@ class InvoicesManager extends Manager{
             $statment = $db-> prepare(
                 "SELECT * 
                 FROM clients
-                
                 WHERE id_companies  = :id
                 ");
             $statment ->execute(["id"=>$id]);
@@ -34,6 +33,7 @@ class InvoicesManager extends Manager{
             return $resultsAll;
         }
     }
+                
 
 
 

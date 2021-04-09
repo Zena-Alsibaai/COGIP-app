@@ -9,10 +9,6 @@
     </head>
     <body>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 9eda539fc8c66408ff2d0d05722c2aaf839b7f7e
         <nav class="header">
             <div class="logoOutline">
                 <div class="logoImage">
@@ -20,7 +16,7 @@
                 </div>
             </div>
 
-<<<<<<< HEAD
+
 <div class="placementLink">
 <div class="linkMenu"><a class='link' href="./homePage.php">Home</a></div>
 <div class="linkMenu"><a class='link' href="./invoicesPage.php">Invoices</a></div>
@@ -30,19 +26,7 @@
 <div class="linkMenu"><a class='link' href="./connexionPage.php">Connexion</a></div>
 </div>
 </nav>
-=======
-            <div class="placementLink">
-                <div class="linkMenu"><a class='link' href="./homePage.php">Home</a></div>
-                <div class="linkMenu"><a class='link' href="./invoicesPage.php">Invoices</a></div>
-                <div class="linkMenu"><a class='link' href="./companiesPage.php">Companies</a></div>
-                <div class="linkMenu"><a class='link' href="./contactPage.php">Contacts</a></div>
-                <div class="linkMenu"><a class="link" href="./inscriptionPage.php">Inscription</a></div>
-                <div class="linkMenu"><a class='link' href="./connexionPage.php">Connexion</a></div>
-            </div>
-        </nav>
 
-
->>>>>>> 9eda539fc8c66408ff2d0d05722c2aaf839b7f7e
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
