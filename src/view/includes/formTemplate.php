@@ -20,7 +20,7 @@
                 <div class="container p-5 ">
                     <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-1 animation">Sign up</h1>
                         <div class="color">
-                            <form class="text-center  my-5 p-5 " action="#!">
+                            <form class="text-center form  my-5 p-5 " action="#!">
                                 <!-- Name -->
                                 <input type="name" class="form-control mb-4 p-3" placeholder="Name :" required>
                                 <!-- Password -->
