@@ -13,7 +13,7 @@
         <header class="py-5 bg-dark">
         
             <div class="container">
-                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-1">Name Page</h1>
+                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4">Name Page</h1>
             </div>
         </header>
 
@@ -37,20 +37,7 @@
                     <tr >
 
                         <?php 
-                        foreach($resultsAll as $each => $resultsAll ){
-
-                            $firstname = $resultsAll['first_name'];
-                            $lastname = $resultsAll['last_name'];
-                            $email = $resultsAll['email'];
-
-                            echo '<tr >'
-                            .'<td class="m-5 p-4 " > ' . $firstname . ' ' . ' </td>'
-                            .'<td class="m-5 p-4 " > ' . $firstname . ' ' . ' </td>'
-                            .'<td class="m-5 p-4 " > ' . $lastname . ' ' . ' </td>'
-                            .'<td class="m-5 p-4 " >' .$email 
-                            .'<td class="m-5 p-4 text-info bg-dark" >
-                                <a href="./ clientsDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
-                        }  
+                        //foreach 
                         ?>
                     </tr>    
                 </table>       

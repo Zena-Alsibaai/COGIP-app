@@ -9,10 +9,6 @@
     //require_once './model/CompaniesManager.php';
     //require_once './model/ClientsManager.php';
     //require_once './model/InvoicesManager.php';
-
-    echo "coucou";
- 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

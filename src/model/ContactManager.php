@@ -13,7 +13,9 @@ class ClientsManager extends Manager{
         $db = $this->connectDB();
         $statment = $db->prepare(
             "SELECT* 
-            FROM clients 
+            FROM clients cl
+            INNER JOIN companies co 
+            ON cl.id_companies = co.id_companies 
             ORDER BY last_name ASC");
         $statment -> execute();
         
@@ -23,36 +25,14 @@ class ClientsManager extends Manager{
 
     }
 
-    public function getSingleClient(){
-        // query est équivalant à prepare.
-        $db = $this->connectDB();
-        $statment = $db->prepare(
-            "SELECT* 
-            FROM clients 
-             ");
-        $statment -> execute();
-
-        // traitement de données récoltée dans la requete.
-        $resultsAll = $statment->fetchAll(PDO::FETCH_ASSOC);
-
-        //return $resultsAll;
-        foreach($resultsAll as $guest => $value){
-            
-            echo "$guest. $value ";
-            //echo $guest['first_name'];
-            var_dump($guest);
-            
-        };
-
-    }
-
-    public function getDetailContacts(){
+    public function getDetailContacts($id){
         $db = $this->connectDB();
         $statment = $db->prepare(
             "SELECT * 
-            FROM clients ");
-        //JOIN companies 
-        //ON contact_persons.comp_id = companies.comp_id
+            FROM clients 
+            WHERE id_client = :id ");
+        $statment -> execute(["id"=>$id]);
+        
     
         $detail_contacts = $statment->fetchAll(PDO::FETCH_ASSOC);
     

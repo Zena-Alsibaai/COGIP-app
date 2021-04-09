@@ -1,10 +1,9 @@
 <?php
 declare(strict_types=1);
 
-//require '../model/ClientsManager.php';
-
-// $Clients = new ClientsManager;
-// $resultsAll = $Clients->getAllUsers();
+require '../model/ContactManager.php';
+$contacts = new ClientsManager;
+$contactAll = $contacts->getDetailContacts($_GET["id"]);
 
 ?>
 
@@ -19,60 +18,50 @@ declare(strict_types=1);
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../style.css">
-        <title>Document</title>
+        <title>Contact Details Page</title>
     </head>
 
     <body>
         <!-- Header-->
         <header class="py-5 bg-dark">
             <div class="container">
-                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-1">Name Page</h1>
+                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4 animation">Contact Details</h1>
             </div>
         </header>
 
        <!-- Page Content -->
         <main class="container">
             <div class="row list-group text-center">
-    
-                <h3 class="my-5"> Projet de la famille BOT </h3>
-                <?php 
-                    // require '../model/ContactManager.php';
-                    // $Client = new ClientsManager;
-                    // $resultsAll = $Client->getDetailContacts();
-                ?>
-                <?php
-                if(isset($_GET['idIndex'])){	
-                    // foreach($Contact->getDetailContacts() as $detail_contacts){
-                    //     if($_POST['more']==$detail_contacts['id_client']){
-                    //         echo $contact['first_name'];
-                    //         echo $contact['last_name'];
-                    //         echo $contact['email'];
-                    //     }
-                    // }
-
-                    $idClient = $_GET['idIndex'];
-                    echo $idClient;
-
-                    require '../model/ContactManager.php';
-                    $Client = new ClientsManager;
-                    $resultsAll = $Client->getDetailContacts();
-
-                    foreach($resultsAll as $indexContact => $contactDetails ){
-
-                        $firstnameDetails = $contactDetails['first_name'];
-                        $lastnameDetails = $contactDetails['last_name'];
-                        $emailDetails = $contactDetails['email'];
-                        $idClientDetails = $contactDetails['id_client'];
-                        $indexSingleDetais = $indexContact;
-
-                        echo $firstnameDetails;
-                    }
-
-
-                }// end of if isset
                 
+                <?php foreach($contactAll as $index => $contact):
+                             
+                             $firstname = $contact['first_name'];
+                             $lastname = $contact['last_name'];
+                             $email = $contact['email'];
                 ?>
-                      
+                
+                <h3 class="my-5"> Projet de la famille BOT </h3>
+
+                <p class=" ">Contact Name: <?php echo $firstname ?> <?php echo $lastname ?></p>
+                <p class=" ">Company: <?php echo $lastname ?>  </p>
+                <p class=" ">Email: <?php echo $email ?> </p>
+
+                <table style="width:100%" class="table table-striped table-hover">
+                    <tr class="text-warning bg-dark">
+                        <th class="shadow p-3 ">Invoice number</th>
+                        <th class="shadow p-3 ">date</th>
+
+                    </tr>
+
+                    <tr >
+                    
+                        <td class="shadow p-3 "> <?php echo $firstname ?>  </td>
+                        <td class="shadow p-3 "> <?php echo $lastname ?> </td>
+
+                    </tr>    
+                </table> 
+
+                <?php endforeach; ?>       
             </div><!-- /.row -->
         </main> <!-- /.container -->
 
