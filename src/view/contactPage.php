@@ -68,12 +68,13 @@ for($i=0;$i<$count;$i++){
                                 $firstname = $contact['first_name'];
                                 $lastname = $contact['last_name'];
                                 $email = $contact['email'];
+                                $companie = $contact['name_companies'];
                         ?>
 
                                 <tr >
                                 <td class="m-5 p-4 " > <?php echo $firstname ?> <?php echo $lastname ?> </td>
                                 <td class="m-5 p-4 " > <?php echo $email ?>  </td>
-                                <td class="m-5 p-4 " > </td>
+                                <td class="m-5 p-4 " > <?php echo $companie ?> </td>
                                 <td class="m-5 p-4 text-info bg-dark" >
                                     <a href="./contactDetailsPage.php?id=<?php echo $idClient?>" type="button" class="btn btn-outline-info" >Details</button> </td>
                                 </tr>

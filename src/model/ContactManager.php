@@ -13,7 +13,9 @@ class ClientsManager extends Manager{
         $db = $this->connectDB();
         $statment = $db->prepare(
             "SELECT* 
-            FROM clients 
+            FROM clients cl
+            INNER JOIN companies co 
+            ON cl.id_companies = co.id_companies 
             ORDER BY last_name ASC");
         $statment -> execute();
         
@@ -22,7 +24,6 @@ class ClientsManager extends Manager{
         return $resultsAll;
 
     }
-
 
     public function getDetailContacts($id){
         $db = $this->connectDB();

@@ -32,13 +32,14 @@ $contactAll = $contacts->getDetailContacts($_GET["id"]);
        <!-- Page Content -->
         <main class="container">
             <div class="row list-group text-center">
+                
                 <?php foreach($contactAll as $index => $contact):
                              
                              $firstname = $contact['first_name'];
                              $lastname = $contact['last_name'];
                              $email = $contact['email'];
                 ?>
-    
+                
                 <h3 class="my-5"> Projet de la famille BOT </h3>
 
                 <p class=" ">Contact Name: <?php echo $firstname ?> <?php echo $lastname ?></p>
@@ -53,6 +54,7 @@ $contactAll = $contacts->getDetailContacts($_GET["id"]);
                     </tr>
 
                     <tr >
+                    
                         <td class="shadow p-3 "> <?php echo $firstname ?>  </td>
                         <td class="shadow p-3 "> <?php echo $lastname ?> </td>
 
