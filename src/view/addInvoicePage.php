@@ -24,19 +24,21 @@ require_once '../model/AddInvoiceManager.php';
 
         <header class="py-5 bg-dark">
             <div class="container">
-                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4">New Invoice</h1>
+                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4 animation">New Invoice</h1>
             </div>
         </header>
 
         <main class="container bg-dark">
+
+            <!-- Form Invoice -->
             <div class="container py-5 bg-dark text-center">
                 <form action="" method="post">
                     <h2 class="text-light">Number</h2>
-                    <input type="text" name="number_of_invoices" placeholder="ex : "/>
+                    <input type="text" name="number_of_invoices" placeholder="ex : F12345678-123 "/>
                     </br>
                     </br>
                     <h2 class="text-light">Date</h2>
-                    <input type="text" name="date" placeholder="Password"/>
+                    <input type="text" name="date" placeholder="ex : 2019-04-04"/>
                     </br>
                     </br>
                     <h2 class="text-light">Company</h2>

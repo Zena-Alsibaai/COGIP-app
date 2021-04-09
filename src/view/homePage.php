@@ -2,14 +2,20 @@
 
 declare(strict_types=1);
 
+session_start();
+
+//Call the Manager
 require_once '../model/HomeManager.php';
 
+//instantiate for display the "Invoices"
 $invoice = new HomeManager();
 $resultInvoice = $invoice->getFiveInvoices();
 
+//instantiate for display the "Contacts"
 $client = new HomeManager();
 $resultClient = $client->getFiveClients();
 
+//instantiate for display the "Companies"
 $companie = new HomeManager();
 $resultCompanie = $companie->getFiveCompanies();
 
@@ -35,7 +41,7 @@ $resultCompanie = $companie->getFiveCompanies();
 
         <header class="py-5 bg-dark">
             <div class="container">
-                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4">Home Page</h1>
+                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4 animation">Home Page</h1>
             </div>
         </header>
 

@@ -14,7 +14,7 @@ require_once '../model/AddCompaniesManager.php';
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-        <title>Inscription - COGIP</title>
+        <title>Add Companies - COGIP</title>
     </head>
 
     <body>
@@ -24,23 +24,25 @@ require_once '../model/AddCompaniesManager.php';
 
         <header class="py-5 bg-dark">
             <div class="container">
-                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4">New Company</h1>
+                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4 animation">New Company</h1>
             </div>
         </header>
 
         <main class="container bg-dark">
+
+            <!-- Form Company -->
             <div class="container py-5 bg-dark text-center">
                 <form action="" method="post">
                     <h2 class="text-light">Name</h2>
-                    <input type="text" name="name_companies" placeholder="ex : "/>
+                    <input type="text" name="name_companies" placeholder="ex : Raviga"/>
                     </br>
                     </br>
                     <h2 class="text-light">Country</h2>
-                    <input type="text" name="country" placeholder="Password"/>
+                    <input type="text" name="country" placeholder="ex : Belgium"/>
                     </br>
                     </br>
                     <h2 class="text-light">VAT Number</h2>
-                    <input type="text" name="vat_number" placeholder="Repeat Password"/>
+                    <input type="text" name="vat_number" placeholder="ex : BE123 456 789"/>
                     </br>
                     </br>
                     <h2 class="text-light">Type Of Company</h2>
