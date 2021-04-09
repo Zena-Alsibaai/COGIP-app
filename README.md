@@ -14,7 +14,7 @@
     - Project organiser
     - Design
     - Contact Page
-    - Contact-details Page
+    - Contact details Page
     
 
   - [Richard Denys](https://github.com/Richyden)
@@ -28,18 +28,19 @@
 
     - Database creation
     - Invoices Page
-    - Invoice-details Page
+    - Invoice details Page
+    - design navbar
 
   - [Zena Alsibaai](https://github.com/Zena-Alsibaai)
 
     - Database creation 
     - Companies Page
-    - Companies-details Page
-    - Animation H1
+    - Companies details Page
+    - design forms
 
-## Dates :
+## Times limit :
 
-**Start: March 29, 2021 / End: April 19, 2021** 
+**Two weeks** 
 
 ## What's COGIP-APP ?
 
@@ -66,13 +67,20 @@ NOTE: Don't forget to add an SQL file containing the structure in the repository
 ## Application used : 
 
 - Remote mysql
-- VS Code
+- Docker 🐳
 
 ## screenshots
 
+![Home Page](./image/home-page.png)
 ![Companies Page](./image/companies-page.png)
 ![Companies Details](./image/companies-detail.png)
+![Inscription Page](./image/inscription-page.png)
+
 
 ## Test our version ;)
 
+### link Heroku
+[]()
+
+### link GitHub
 []()
