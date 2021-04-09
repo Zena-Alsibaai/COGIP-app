@@ -54,9 +54,8 @@ $resultsAll = $Contacts->getAllContacts();
                         <td class="m-5 p-4 " > <?php echo $companie ?> </td>
                         <td class="m-5 p-4 text-info bg-dark" >
                             <a href="./contactDetailsPage.php?id=<?php echo $idClient?>" type="button" class="btn btn-outline-info" >Details</button> </td>
-                        <?php endforeach; ?>
                     </tr>
-                       
+                <?php endforeach; ?>
                 </table>  
             </div><!-- /.row -->
         </main> <!-- /.container -->
