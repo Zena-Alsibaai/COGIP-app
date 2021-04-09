@@ -9,36 +9,23 @@
     </head>
     <body>
 
-<<<<<<< HEAD
+
         <nav class="header">
             <div class="logoOutline">
                 <div class="logoImage">
                     <p class="logo"> GOGIB </br> LOGO </p>
                 </div>
             </div>
-=======
+
 <div class="placementLink">
 <div class="linkMenu"><a class='link' href="./homePage.php">Home</a></div>
 <div class="linkMenu"><a class='link' href="./invoicesPage.php">Invoices</a></div>
 <div class="linkMenu"><a class='link' href="./companiesPage.php">Companies</a></div>
-<div class="linkMenu"><a class='link' href="./clientsPage.php">Contacts</a></div>
+<div class="linkMenu"><a class='link' href="./contactPage.php">Contacts</a></div>
 <div class="linkMenu"><a class="link" href="./inscriptionPage.php">Inscription</a></div>
 <div class="linkMenu"><a class='link' href="./connexionPage.php">Connexion</a></div>
 </div>
 </nav>
->>>>>>> abc240df833fe1eaefc7ba5eec1201fb6277871d
-
-            <div class="placementLink">
-                <div class="linkMenu"><a class='link' href="./homePage.php">Home</a></div>
-                <div class="linkMenu"><a class='link' href="./invoicesPage.php">Invoices</a></div>
-                <div class="linkMenu"><a class='link' href="./companiesPage.php">Companies</a></div>
-                <div class="linkMenu"><a class='link' href="./clientsPage.php">Contacts</a></div>
-                <div class="linkMenu"><a class="link" href="#">Inscription</a></div>
-                <div class="linkMenu"><a class='link' href="#">Connexion</a></div>
-            </div>
-        </nav>
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>

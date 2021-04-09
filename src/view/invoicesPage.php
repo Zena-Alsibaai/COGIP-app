@@ -7,6 +7,7 @@ $invoices = new InvoicesManager();
 $resultsAll = $invoices->getAllUsers();
 
 
+
 ?>
 
 <!DOCTYPE html>
@@ -52,56 +53,42 @@ $resultsAll = $invoices->getAllUsers();
 
                         <?php 
                         foreach($resultsAll as $each => $resultsAll ){
-
-                            $number_of_invoices = $resultsAll['number_of_invoices'];
-                            $date = $resultsAll['date'];
-                            $name_companies = $resultsAll['name_companies'];
-                            $types_of = $resultsAll['types_of'];
-
                             echo '<tr >'
-                            .'<td name="test" class="m-5 p-4 " > ' . $number_of_invoices . ' ' . ' </td>'
-                            .'<td class="m-5 p-4 " > ' . $date. ' ' . ' </td>'
-                            .'<td class="m-5 p-4 " > ' . $name_companies . ' ' . ' </td>'
-                            .'<td class="m-5 p-4 " >' .$types_of 
+                            .'<td name="test" class="m-5 p-4 " > ' . $resultsAll['number_of_invoices']. ' ' . ' </td>'
+                            .'<td class="m-5 p-4 " > ' . $resultsAll['date']. ' ' . ' </td>'
+                            .'<td class="m-5 p-4 " > ' . $resultsAll['name_companies']. ' ' . ' </td>'
+                            .'<td class="m-5 p-4 " >' .$resultsAll['types_of']
                             .'<td class="m-5 p-4 text-info bg-dark" >
-                                <a href="#" method="post" name="details" type="button" class="btn btn-outline-info">Details</a> </td>'. '</tr>';
+                                <a href="./detailInvoices.php?id='. $resultsAll['id_invoices'] .'" method="post" name="details" type="button" class="btn btn-outline-info">Details</a> </td>'. '</tr>';
                         }  
-                             
-
+                            
                         ?>
                     </tr>    
                 </table>       
             </div><!-- /.row -->
         </main> <!-- /.container -->
-
-        <section class="detail-invoices">
-
-                        <h2 class="title-detail">
-                            
-                                
-                            <?php
-
-                              
-                                
-                                    
-                                
-                            ?>
-                        </h2>
-
                         <table style="width:100%" class="table table-striped table-hover">
                             <tr class="text-warning bg-dark">
-
                             </tr>
                         </table>
-
-
-
         </section>
-       
-
         <!-- Bootstrap core JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
     </body>
 </html>
+                            
+                            
+
+                             
+
+
+
+        
+
+       
+
+
+
+
+
 
