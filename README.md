@@ -39,7 +39,7 @@
 
 ## Dates :
 
-*** Start: March 29, 2021 / End: April 19, 2021 
+**Start: March 29, 2021 / End: April 19, 2021** 
 
 ## What's COGIP-APP ?
 
@@ -47,20 +47,21 @@ It's a challenge assigned by [BECODE](https://becode.org/) training center.
 
 ## The mission :
 
-*** The COGIP is a company which we don't know an all lot about apart that they produce Jean-Michel toys and that they are serious workers. They also have a incredible team spirit within their rank.
+*** **The COGIP is a company which we don't know an all lot about apart that they produce Jean-Michel toys and that they are serious workers. They also have a incredible team spirit within their rank.**
 
-Jean-Christian Ranu works in accounting at the COGIP. He has been using an old, ugly and incomplete software for years, making him go between it and excels sheet. Jean-Christian like paella, crosswords and his coworker Muriel Perrache.
+**Jean-Christian** Ranu works in accounting at **the COGIP**. He has been using an old, ugly and incomplete software for years, making him go between it and excels sheet. **Jean-Christian** like paella, crosswords and his coworker Muriel Perrache.
 
-We propose that you code a web application which will respond to the needs and desire of Jean-Christian.
+**We propose that you code a web application which will respond to the needs and desire of Jean-Christian.**
 
 NOTE: Don't forget to add an SQL file containing the structure in the repository, as well as, an entry within the README detailing what each person did. ***
 
 ## The languages used :
 
-- HTML5
-- CSS3
-- PHP
-- MYSQL
+- HTML5 🥀
+- CSS3 🌹
+- BOOTSTRAP 🏄🏼
+- PHP 🐘
+- MYSQL 🎊
 
 ## Application used : 
 
@@ -69,8 +70,8 @@ NOTE: Don't forget to add an SQL file containing the structure in the repository
 
 ## And voilà this is a screenshot
 
-[Companies Page](../image/companies-page.png)
-[Companies Details](../image/companies-detail.png)
+![Companies Page](../image/companies-page.png)
+![Companies Details](../image/companies-detail.png)
 
 ## See our version ;)
 
