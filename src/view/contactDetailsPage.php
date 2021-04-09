@@ -1,10 +1,9 @@
 <?php
 declare(strict_types=1);
 
-//require '../model/ClientsManager.php';
-
-// $Clients = new ClientsManager;
-// $resultsAll = $Clients->getAllUsers();
+require '../model/ContactManager.php';
+$contacts = new ClientsManager;
+$contactAll = $contacts->getDetailContacts($_GET["id"]);
 
 ?>
 
@@ -34,43 +33,40 @@ declare(strict_types=1);
             <div class="row list-group text-center">
     
                 <h3 class="my-5"> Projet de la famille BOT </h3>
-                <?php 
-                    // require '../model/ContactManager.php';
-                    // $Client = new ClientsManager;
-                    // $resultsAll = $Client->getDetailContacts();
-                ?>
-                <?php
-                if(isset($_GET['idIndex'])){	
-                    // foreach($Contact->getDetailContacts() as $detail_contacts){
-                    //     if($_POST['more']==$detail_contacts['id_client']){
-                    //         echo $contact['first_name'];
-                    //         echo $contact['last_name'];
-                    //         echo $contact['email'];
-                    //     }
-                    // }
 
-                    $idClient = $_GET['idIndex'];
-                    echo $idClient;
+                <table style="width:100%" class="table table-striped table-hover">
+                    <tr class="text-warning bg-dark">
+                        <th class="shadow p-3 ">Column name</th>
+                        <th class="shadow p-3 ">Column name</th>
+                        <th class="shadow p-3 ">Column name</th>
+                        <th class="shadow p-3 "></th>
 
-                    require '../model/ContactManager.php';
-                    $Client = new ClientsManager;
-                    $resultsAll = $Client->getDetailContacts();
+                    </tr>
 
-                    foreach($resultsAll as $indexContact => $contactDetails ){
-
-                        $firstnameDetails = $contactDetails['first_name'];
-                        $lastnameDetails = $contactDetails['last_name'];
-                        $emailDetails = $contactDetails['email'];
-                        $idClientDetails = $contactDetails['id_client'];
-                        $indexSingleDetais = $indexContact;
-
-                        echo $firstnameDetails;
-                    }
-
-
-                }// end of if isset
+                    <tr >
                 
-                ?>
+                         <?php
+
+                         foreach($contactAll as $index => $contact){
+                             
+                             $firstname = $contact['first_name'];
+                             $lastname = $contact['last_name'];
+                             $email = $contact['email'];
+
+                             echo '<tr >'
+                    
+                                .'<td class="shadow p-3 ">' . $firstname . ' ' . ' </td>'
+                                .'<td class="shadow p-3 ">' . $lastname . ' ' . ' </td>'
+                                .'<td class="m-5 p-4 " >'. $email . ' ' .' </td>';
+                    
+                         }
+
+
+                         ?>
+
+                    </tr>    
+                </table> 
+
                       
             </div><!-- /.row -->
         </main> <!-- /.container -->
