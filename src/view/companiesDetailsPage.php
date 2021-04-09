@@ -8,11 +8,6 @@ $companiesInvoices = $Companies->getCompaniesInvoices($_GET["id"]);
 $companiesContactPersons = $Companies ->getCompaniesContactPersons($_GET["id"]);
 // On appele toutes les fonction qui sont dans le fichier manager en les stoquant dans des variables qu'on va utiliser plus bas pour l'affichage 
 
-
-
-
-
-   
 ?>
 
 <!DOCTYPE html>
@@ -38,8 +33,6 @@ $companiesContactPersons = $Companies ->getCompaniesContactPersons($_GET["id"]);
     <main class="container">
     <div class="row list-group text-center">
 
-        
-        
         <table style="width:100%" class="table table-striped table-hover my-5">
             <h4 class="my-5">Company :</h4>
             <tr class="text-warning bg-dark">
@@ -48,26 +41,21 @@ $companiesContactPersons = $Companies ->getCompaniesContactPersons($_GET["id"]);
                 <th class="shadow p-3 ">Type : </th>
              
             </tr>
-            <tr >
-            <tr >
-            <?php 
-                foreach($companiesDetails as  $details => $result){
-                    $companiesName = $result['name_companies'];
-                    $companiesId= $result['id_companies'];
-                    $vatNumber= $result['vat_number'];
-                    $type=$result['types_of'];
-
             
-                    echo '<tr >'
-                    
-                    .'<td class="shadow p-3 ">' . $companiesName . ' ' . ' </td>'
-                    .'<td class="shadow p-3 ">' . $vatNumber . ' ' . ' </td>'
-                    .'<td class="m-5 p-4 " >'. $type . ' ' .' </td>';
-                    
-                }  
-                
-            ?>
-            </tr> 
+
+                <?php foreach($companiesDetails as  $details => $result):
+                        $companiesName = $result['name_companies'];
+                        $companiesId= $result['id_companies'];
+                        $vatNumber= $result['vat_number'];
+                        $type=$result['types_of'];
+                ?>
+            <tr >
+                <td class=" m-5 p-4"><?php echo $companiesName; ?></td>
+                <td class=" m-5 p-4"><?php echo $vatNumber; ?></td>
+                <td class=" m-5 p-4"><?php echo $type; ?></td> 
+            
+            </tr>
+            <?php endforeach; ?>  
         </table>
 
         <table style="width:100%" class="table table-striped table-hover">
@@ -80,23 +68,21 @@ $companiesContactPersons = $Companies ->getCompaniesContactPersons($_GET["id"]);
                 <th class="shadow p-3 ">Contact person : </th>
              
             </tr>
+            
+                <?php foreach($companiesInvoices as $invoice ):
+                $invoiceNumber =  $invoice ['number_of_invoices'];
+                $invoiceDate = $invoice ['date'];
+                $contactName=  $invoice ['first_name']. $invoice ['last_name']
+                
+                ?>
             <tr >
-            <?php
-            
-            foreach($companiesInvoices as $invoice ){
-
-                echo '<tr >'
-                .'<td class="m-5 p-4 " > ' . $invoice['number_of_invoices'] . ' ' . ' </td>'
-                .'<td class="m-5 p-4 " > ' . $invoice['date'] . ' ' . ' </td>'  
-                .'<td class="m-5 p-4 " > ' . $invoice['first_name'] . ' ' .$invoice['last_name'].' </td>'  ;
-                // .'<td class="m-5 p-4 text-info bg-dark" >';
-            }
-            
-            
-            
-            ?>
-           
+                    <td class=" m-5 p-4"><?php echo $invoiceNumber; ?></td>
+                    <td class=" m-5 p-4"><?php echo $invoiceDate; ?></td>
+                    <td class=" m-5 p-4"><?php echo $contactName ; ?> </td> 
+                
             </tr> 
+            <?php endforeach; ?>
+             
         </table>  
         
         <table style="width:100%" class="table table-striped table-hover">
@@ -110,22 +96,18 @@ $companiesContactPersons = $Companies ->getCompaniesContactPersons($_GET["id"]);
                 
              
             </tr>
+            
+                <?php foreach($companiesContactPersons as $person  ):
+                $contactPerson =  $person ['first_name'] . $person['last_name'];
+                $personEmail = $person ['email'];
+                ?>
             <tr >
-            <?php
-            
-            foreach($companiesContactPersons as $person ){
-
-                echo '<tr >'
-                .'<td class="m-5 p-4 " > ' . $person['first_name'] . ' ' . $person['last_name'] .' ' .' </td>'
-                .'<td class="m-5 p-4 " > ' . $person['email'] . ' ' . ' </td>'  ;
-                // .'<td class="m-5 p-4 text-info bg-dark" >';
-            }
-            
-            
-            
-            ?>
-           
+                    <td class=" m-5 p-4"><?php echo $contactPerson; ?></td>
+                    <td class=" m-5 p-4"><?php echo $personEmail; ?></td>
+                
+                
             </tr> 
+            <?php endforeach; ?> 
         </table> 
             
     </div>
