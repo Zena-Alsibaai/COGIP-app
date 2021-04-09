@@ -7,9 +7,9 @@ require_once '../model/Manager.php';
 // l'appel de la db est protected. Donc nous allons passer par un enfant 'ClientsManager' qui est une extension de Manager
 class ClientsManager extends Manager{
 
-    // public pour pouvoir utiliser en appellant la fonction getAllUsers()
+    // public pour pouvoir utiliser en appellant la fonction getAllContacts()
     public function getAllContacts(){
-        // query est équivalant à prepare.
+        // prepare va préparer les données sans les envoyer/exécuter
         $db = $this->connectDB();
         $statment = $db->prepare(
             "SELECT* 
@@ -29,13 +29,13 @@ class ClientsManager extends Manager{
         $db = $this->connectDB();
         $statment = $db->prepare(
             "SELECT * 
-            FROM clients 
+            FROM clients cl
+            INNER JOIN invoices i
+            ON cl.id_client = i.id_clients
             WHERE id_client = :id ");
         $statment -> execute(["id"=>$id]);
         
-    
         $detail_contacts = $statment->fetchAll(PDO::FETCH_ASSOC);
-    
         return $detail_contacts;
     }
 }
