@@ -70,8 +70,8 @@ NOTE: Don't forget to add an SQL file containing the structure in the repository
 
 ## And voilà this is a screenshot
 
-![Companies Page](../image/companies-page.png)
-![Companies Details](../image/companies-detail.png)
+![Companies Page](./image/companies-page.png)
+![Companies Details](./image/companies-detail.png)
 
 ## See our version ;)
 
