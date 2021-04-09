@@ -49,13 +49,12 @@ class CompaniesManager extends Manager{
         $db = $this->connectDB();
         $statment = $db-> prepare(
             "SELECT * 
-            FROM companies
+            FROM companies c
+            INNER JOIN types_of_companies t
+            ON c.id_types = t.id_types
             WHERE id_companies = :id
             ");
         $statment ->execute(["id"=>$id]);
-
-
-        
         // traitement de données récoltée dans la requete.
         $resultsAll = $statment->fetchAll(PDO::FETCH_ASSOC);
         return $resultsAll;
