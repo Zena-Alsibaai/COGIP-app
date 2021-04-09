@@ -68,11 +68,11 @@ NOTE: Don't forget to add an SQL file containing the structure in the repository
 - Remote mysql
 - VS Code
 
-## And voilà this is a screenshot
+## screenshots
 
 ![Companies Page](./image/companies-page.png)
 ![Companies Details](./image/companies-detail.png)
 
-## See our version ;)
+## Test our version ;)
 
 []()
