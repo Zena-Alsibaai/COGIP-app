@@ -18,7 +18,7 @@
 
                 <!-- Default form login -->
                 <div class="container p-5 ">
-                    <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-1 ">Sign up</h1>
+                    <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-1 animation">Sign up</h1>
                         <div class="color">
                             <form class="text-center  my-5 p-5 " action="#!">
                                 <!-- Name -->
