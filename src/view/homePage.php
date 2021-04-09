@@ -22,7 +22,7 @@ $resultCompanie = $companie->getFiveCompanies();
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
         <title>Home Page - COGIP</title>
     </head>
@@ -30,7 +30,7 @@ $resultCompanie = $companie->getFiveCompanies();
     <body>
 
         <?php
-            require 'includes/navbar.php'
+            require './includes/navbar.php'
         ?>
 
         <header class="py-5 bg-dark">
