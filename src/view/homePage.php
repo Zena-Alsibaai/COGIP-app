@@ -2,14 +2,20 @@
 
 declare(strict_types=1);
 
+session_start();
+
+//Call the Manager
 require_once '../model/HomeManager.php';
 
+//instantiate for display the "Invoices"
 $invoice = new HomeManager();
 $resultInvoice = $invoice->getFiveInvoices();
 
+//instantiate for display the "Contacts"
 $client = new HomeManager();
 $resultClient = $client->getFiveClients();
 
+//instantiate for display the "Companies"
 $companie = new HomeManager();
 $resultCompanie = $companie->getFiveCompanies();
 
@@ -22,7 +28,7 @@ $resultCompanie = $companie->getFiveCompanies();
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
         <title>Home Page - COGIP</title>
     </head>
@@ -30,12 +36,12 @@ $resultCompanie = $companie->getFiveCompanies();
     <body>
 
         <?php
-            require 'includes/navbar.php'
+            require './includes/navbar.php'
         ?>
 
         <header class="py-5 bg-dark">
             <div class="container">
-                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4">Home Page</h1>
+                <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4 animation">Home Page</h1>
             </div>
         </header>
 

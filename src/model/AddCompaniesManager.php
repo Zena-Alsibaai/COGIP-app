@@ -25,8 +25,8 @@ if(isset($_POST["submit"]) && isset($_POST["name_companies"]) && isset($_POST["c
     $vat_number = $_POST["vat_number"];
     $id_types = $_POST["id_types"];
 
-    $contact = new NewContact();
-    $contact->addContact($name_companies, $country, $vat_number, $id_types);
+    $company = new NewCompanies();
+    $company->addCompanies($name_companies, $country, $vat_number, $id_types);
 }
 
 ?>

@@ -77,6 +77,8 @@ class HomeManager extends Manager {
             FROM invoices i
             INNER JOIN companies co
             ON i.id_companies = co.id_companies
+            INNER JOIN clients c
+            ON i.id_clients = c.id_client
             ORDER BY id_invoices");
         
         // traitement de données récoltée dans la requete.
