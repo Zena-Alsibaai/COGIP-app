@@ -7,11 +7,10 @@ $contactAll = $contacts->getDetailContacts($_GET["id"]);
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
-    <?php require "./includes/navbar.php" ?>
+    
     <head>
         <meta charset="UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -22,6 +21,10 @@ $contactAll = $contacts->getDetailContacts($_GET["id"]);
     </head>
 
     <body>
+
+        <!-- Navbar-->
+        <?php require "./includes/navbar.php" ?>
+
         <!-- Header-->
         <header class="py-5 bg-dark">
             <div class="container">
@@ -38,26 +41,28 @@ $contactAll = $contacts->getDetailContacts($_GET["id"]);
                              $firstname = $contact['first_name'];
                              $lastname = $contact['last_name'];
                              $email = $contact['email'];
+                             $invoice = $contact['number_of_invoices'];
+                             $date = $contact['date'];
                 ?>
+                                
+                <div class="my-4 pb-4 border border-warning border-5 rounded">
+                    <h2 class="my-4 fw-bolder border-bottom border-dark"> <?php echo $firstname ?> <?php echo $lastname ?> </h2>
+                    <h4 class="my-2 ">Contact Name: <?php echo $firstname ?> <?php echo $lastname ?></h4>
+                    <h4 class="my-2 ">Company: <?php echo $lastname ?>  </h4>
+                    <h4 class="my-2 ">Email: <?php echo $email ?> </h4>
+                </div>
                 
-                <h3 class="my-5"> Projet de la famille BOT </h3>
-
-                <p class=" ">Contact Name: <?php echo $firstname ?> <?php echo $lastname ?></p>
-                <p class=" ">Company: <?php echo $lastname ?>  </p>
-                <p class=" ">Email: <?php echo $email ?> </p>
 
                 <table style="width:100%" class="table table-striped table-hover">
+                    
                     <tr class="text-warning bg-dark">
                         <th class="shadow p-3 ">Invoice number</th>
                         <th class="shadow p-3 ">date</th>
-
                     </tr>
 
-                    <tr >
-                    
-                        <td class="shadow p-3 "> <?php echo $firstname ?>  </td>
-                        <td class="shadow p-3 "> <?php echo $lastname ?> </td>
-
+                    <tr >  
+                        <td class="shadow p-3 "> <?php echo $invoice ?>  </td>
+                        <td class="shadow p-3 "> <?php echo $date ?> </td>
                     </tr>    
                 </table> 
 

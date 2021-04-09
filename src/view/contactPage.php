@@ -6,29 +6,9 @@ require '../model/ContactManager.php';
 $Contacts = new ClientsManager;
 $resultsAll = $Contacts->getAllContacts();
 
-// $count = count($resultsAll);
-// echo $count;
-
-/*
-for($i=0;$i<$count;$i++){ 
-        $firstname['first_name'] = $resultsAll;
-        $lastname = $resultsAll['last_name'];
-        $email = $resultsAll['email']; 
-        //var_dump( $firstname);
-        
-    }; */
-
-// green = success 
-// red = danger 
-// orange = warning 
-// blue = primary 
-// light blue = info 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-    <!-- -->
     
     <head>
         <meta charset="UTF-8">
@@ -39,12 +19,12 @@ for($i=0;$i<$count;$i++){
     </head>
 
     <body>
-        <!-- Header-->
+        <!-- Navbar-->
         <?php require "./includes/navbar.php" ?>
+
+        <!-- Header-->
         <header class="py-5 bg-dark">
-            
-            <div class="container">
-                
+            <div class="container">   
                 <h1 class="m-4 p-5 border border-5 border-warning rounded-pill text-center text-uppercase fw-bold bg-white display-4 animation">Contacts </h1>
             </div>
         </header>
@@ -59,35 +39,27 @@ for($i=0;$i<$count;$i++){
                         <th class="shadow p-3 ">Email</th>
                         <th class="shadow p-3 ">Company</th>
                         <th class="shadow p-3 "></th>
-
                     </tr>
-                            
-                        <?php foreach($resultsAll as $index => $contact):
-                                
-                                $idClient = $contact['id_client'];
-                                $firstname = $contact['first_name'];
-                                $lastname = $contact['last_name'];
-                                $email = $contact['email'];
-                                $companie = $contact['name_companies'];
+                    <tr >    
+                        <?php foreach($resultsAll as $index => $contact):   
+                            $idClient = $contact['id_client'];
+                            $firstname = $contact['first_name'];
+                            $lastname = $contact['last_name'];
+                            $email = $contact['email'];
+                            $companie = $contact['name_companies'];
                         ?>
-
-                                <tr >
-                                <td class="m-5 p-4 " > <?php echo $firstname ?> <?php echo $lastname ?> </td>
-                                <td class="m-5 p-4 " > <?php echo $email ?>  </td>
-                                <td class="m-5 p-4 " > <?php echo $companie ?> </td>
-                                <td class="m-5 p-4 text-info bg-dark" >
-                                    <a href="./contactDetailsPage.php?id=<?php echo $idClient?>" type="button" class="btn btn-outline-info" >Details</button> </td>
-                                </tr>
-                    
-                        
+       
+                        <td class="m-5 p-4 " > <?php echo $firstname ?> <?php echo $lastname ?> </td>
+                        <td class="m-5 p-4 " > <?php echo $email ?>  </td>
+                        <td class="m-5 p-4 " > <?php echo $companie ?> </td>
+                        <td class="m-5 p-4 text-info bg-dark" >
+                            <a href="./contactDetailsPage.php?id=<?php echo $idClient?>" type="button" class="btn btn-outline-info" >Details</button> </td>
                         <?php endforeach; ?>
+                    </tr>
                        
                 </table>  
-                
-     
             </div><!-- /.row -->
         </main> <!-- /.container -->
-
 
         <!-- Footer -->
         <?php require "./includes/footer.php" ?>
