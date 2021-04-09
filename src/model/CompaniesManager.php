@@ -14,6 +14,7 @@ class CompaniesManager extends Manager{
             INNER JOIN types_of_companies
             ON types_of_companies.id_types = companies.id_types 
             WHERE types_of= 'client'
+            ORDER BY  id_companies
             ");
         
         // traitement de données récoltée dans la requete.
@@ -30,6 +31,7 @@ class CompaniesManager extends Manager{
             INNER JOIN types_of_companies
             ON types_of_companies.id_types = companies.id_types 
             WHERE types_of= 'supplier'
+            ORDER BY  id_companies
             ");
 
 
