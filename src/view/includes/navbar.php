@@ -18,12 +18,12 @@
 
 
 <div class="placementLink">
-<div class="linkMenu"><a class='link' href="./homePage.php">Home</a></div>
-<div class="linkMenu"><a class='link' href="./invoicesPage.php">Invoices</a></div>
-<div class="linkMenu"><a class='link' href="./companiesPage.php">Companies</a></div>
-<div class="linkMenu"><a class='link' href="./contactPage.php">Contacts</a></div>
-<div class="linkMenu"><a class="link" href="./inscriptionPage.php">Inscription</a></div>
-<div class="linkMenu"><a class='link' href="./connexionPage.php">Connexion</a></div>
+<div class="linkMenu"><a class='link' href="../view/homePage.php">Home</a></div>
+<div class="linkMenu"><a class='link' href="../view/invoicesPage.php">Invoices</a></div>
+<div class="linkMenu"><a class='link' href="../view/companiesPage.php">Companies</a></div>
+<div class="linkMenu"><a class='link' href="../view/contactPage.php">Contacts</a></div>
+<div class="linkMenu"><a class="link" href="../view/inscriptionPage.php">Inscription</a></div>
+<div class="linkMenu"><a class='link' href="../view/connexionPage.php">Connexion</a></div>
 </div>
 </nav>
 

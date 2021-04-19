@@ -47,6 +47,18 @@ $resultCompanie = $companie->getFiveCompanies();
 
         <main>
 
+            <ul>
+                <li><a href="../view/addContactPage.php">Add Contact</a></li>
+                <li><a href="../view/addCompaniesPage.php">Add Company</a></li>
+                <li><a href="../view/addInvoicePage.php">Add Invoice</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="../view/deleteContact.php">Delete Contact</a></li>
+                <li><a href="../view/deleteCompanies.php">Delete Company</a></li>
+                <li><a href="../view/deleteInvoices.php">Delete Invoice</a></li>
+            </ul>
+
             <h2 class="text-center">Welcome to COGIP !</h2>
 
             <!-- ==== Display the last five invoices ==== -->
