@@ -5,7 +5,7 @@ declare(strict_types=1);
 session_start();
 
 //Call the Manager
-require_once '../model/HomeManager.php';
+require '../model/HomeManager.php';
 
 //instantiate for display the "Invoices"
 $invoice = new HomeManager();
@@ -86,6 +86,7 @@ $resultCompanie = $companie->getFiveCompanies();
                         <th class="shadow p-3 ">First Name</th>
                         <th class="shadow p-3 ">Last Name</th>
                         <th class="shadow p-3 ">Email</th>
+                        <th class="shadow p-3 ">Phone Number</th>
                         <th class="shadow p-3 ">Names Of Companies</th>
                         <th class="shadow p-3 "></th>
 
@@ -99,7 +100,8 @@ $resultCompanie = $companie->getFiveCompanies();
                             echo '<tr >'
                             .'<td class="m-5 p-4 " > ' . $resultClient["first_name"] . ' ' . ' </td>'
                             .'<td class="m-5 p-4 " > ' . $resultClient["last_name"] . ' ' . ' </td>'
-                            .'<td class="m-5 p-4 " > ' . $resultClient["email"] . ' ' . ' </td>' 
+                            .'<td class="m-5 p-4 " > ' . $resultClient["email"] . ' ' . ' </td>'
+                            .'<td class="m-5 p-4 " > ' . $resultClient["phone_number"] . ' ' . ' </td>' 
                             .'<td class="m-5 p-4 " > ' . $resultClient["name_companies"] . ' ' . ' </td>' 
                             .'<td class="m-5 p-4 text-info bg-dark" >
                                 <a href="./ clientsDetailsPage.php" type="button" class="btn btn-outline-info">Details</button> </td>'. '</tr>';
