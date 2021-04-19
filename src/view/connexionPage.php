@@ -33,10 +33,10 @@ require_once '../model/ConnexionManager.php';
 
         <main class="container bg-dark">
             <div class="container py-5 bg-dark text-center">
-                <form action="homePage.php" method="post">
-                    <input type="text" name="nameverif" placeholder="Your Name"/>
+                <form action="homePage.php" method="POST">
+                    <input type="text" name="username" placeholder="Your Name"/>
                     </br>
-                    <input type="password" name="pwdverif" placeholder="Your Password"/>
+                    <input type="password" name="password" placeholder="Your Password"/>
                     </br>
                     <input type="submit" name="submit" value="Log In"/>
                 </form>
