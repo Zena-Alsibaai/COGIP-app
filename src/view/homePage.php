@@ -5,7 +5,7 @@ declare(strict_types=1);
 session_start();
 
 //Call the Manager
-require './model/HomeManager.php';
+require_once './model/HomeManager.php';
 
 //instantiate for display the "Invoices"
 $invoice = new HomeManager();

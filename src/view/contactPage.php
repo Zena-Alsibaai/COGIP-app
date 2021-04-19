@@ -53,10 +53,15 @@ $resultsAll = $Contacts->getAllContacts();
                         <td class="m-5 p-4 " > <?php echo $email ?>  </td>
                         <td class="m-5 p-4 " > <?php echo $companie ?> </td>
                         <td class="m-5 p-4 text-info bg-dark" >
+<<<<<<< HEAD
                             <a href="./contactDetailsPage.php?id=<?php echo $idClient?>" type="button" class="btn btn-outline-info" >Details</button> </td>
-                        <?php endforeach; ?>
                     </tr>
-                       
+                <?php endforeach; ?>
+=======
+                            <a href="./contactDetailsPage.php?id=<?php echo $idClient?>" type="button" class="btn btn-outline-info" >Details </td>   
+                    </tr>
+                    <?php endforeach; ?>
+>>>>>>> 03047b79a4981ac24af5d0572f52521638a13119
                 </table>  
             </div><!-- /.row -->
         </main> <!-- /.container -->
