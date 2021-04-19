@@ -1,16 +1,20 @@
 <?php
-    require_once './model/Manager.php';
+    declare(strict_types=1);
+    require_once './view/homePage.php';
+    // require_once './model/Manager.php';
 
-    require_once './model/User.php';
-    require_once './model/ClientsManager.php';
-    require_once './model/CompaniesManager.php';
-    require_once './model/InvoicesManager.php';
+    // require_once './model/User.php';
+    // require_once './model/ClientsManager.php';
+    // require_once './model/CompaniesManager.php';
+    // require_once './model/InvoicesManager.php';
     
     //require_once './model/CompaniesManager.php';
     //require_once './model/ClientsManager.php';
     //require_once './model/InvoicesManager.php';
 ?>
-<!DOCTYPE html>
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -25,10 +29,10 @@
     <h1> test</h1>
         <?php 
 
-        $object = new ClientsManager;
+        //$object = new ClientsManager;
         // echo $object->getAllUsers();
     
         ?>
 
     </body>
-</html>
+</html> -->
