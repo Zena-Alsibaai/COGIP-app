@@ -5,7 +5,7 @@ declare(strict_types=1);
 session_start();
 
 //Call the Manager
-require_once '../model/HomeManager.php';
+require_once './model/HomeManager.php';
 
 //instantiate for display the "Invoices"
 $invoice = new HomeManager();
@@ -36,7 +36,7 @@ $resultCompanie = $companie->getFiveCompanies();
     <body>
 
         <?php
-            require './includes/navbar.php'
+            require 'includes/navbar.php'
         ?>
 
         <header class="py-5 bg-dark">
