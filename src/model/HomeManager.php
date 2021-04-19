@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require_once '../model/Manager.php';
+require_once './model/Manager.php';
 
 class HomeManager extends Manager {
 

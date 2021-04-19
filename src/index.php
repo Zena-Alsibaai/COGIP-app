@@ -1,3 +1,3 @@
-<?php
-    require './src/view/homePage.php';
+<?php 
+    require_once './view/homePage.php';
 ?>
