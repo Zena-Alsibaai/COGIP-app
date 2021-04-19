@@ -30,7 +30,7 @@
                     </tr>
                     <tr >
                      <?php 
-                     include('./includes/dataTableInvoicesPage.php')
+                     include('./includes/dataTablePageInvoices.php')
                      ?>
                     </tr>    
                 </table>       
